@@ -6,7 +6,24 @@ target 'dropspot' do
   use_frameworks!
 
   # Pods for dropspot
-pod 'MaterialComponents'
+pod 'MaterialComponents/schemes/Color'
+pod 'MaterialComponents/AppBar'
+pod 'MaterialComponents/Buttons'
+pod 'MaterialComponents/Buttons+Theming'
+pod 'MaterialComponents/TextControls+FilledTextAreas'
+pod 'MaterialComponents/TextControls+FilledTextFields'
+pod 'MaterialComponents/TextControls+OutlinedTextAreas'
+pod 'MaterialComponents/TextControls+OutlinedTextFields'
+pod 'MaterialComponents/TextControls+FilledTextAreasTheming'
+pod 'MaterialComponents/TextControls+FilledTextFieldsTheming'
+pod 'MaterialComponents/TextControls+OutlinedTextAreasTheming'
+pod 'MaterialComponents/TextControls+OutlinedTextFieldsTheming'
+pod 'MaterialComponents/Cards'
+pod 'MaterialComponents/Slider'
+pod 'MaterialComponents/Dialogs'
+pod 'MaterialComponents/NavigationDrawer'
+pod 'MaterialComponents/Snackbar'
+
 
   target 'dropspotTests' do
     inherit! :search_paths
