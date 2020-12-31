@@ -8,6 +8,15 @@
 import Foundation
 
 struct Validation {
-    let success: Bool
-    let message: String
+    var succes: Bool = true
+    var message: String = "no message"
+    
+    init() {
+        
+    }
+    
+    init(message: String) {
+        self.succes = false
+        self.message  = message
+    }
 }

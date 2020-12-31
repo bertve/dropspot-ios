@@ -8,7 +8,7 @@
 import Foundation
 import MaterialComponents
 
-class LoginFormValidator {
+class LoginFormValidator : FormValidator {
     
     private let emailOrUsername, password: MDCOutlinedTextField
     
@@ -17,11 +17,20 @@ class LoginFormValidator {
         self.password = password
     }
     
-    func validateEmailOrUserName(){
+    func validateEmailOrUserName() -> Bool{
+        let field = self.emailOrUsername
+        let validation = FormValidationUtil.txtFieldIsRequired( field.text)
+        return FormValidationUtil.handleValidation(validation,field)
     }
     
-    func validatePassword(){
-        
+    func validatePassword() -> Bool {
+        let field = self.password
+        let validation = FormValidationUtil.txtFieldIsRequired( field.text)
+        return FormValidationUtil.handleValidation(validation,field)
     }
-
+    
+    func validate() -> Bool {
+        return  validateEmailOrUserName() && validatePassword()
+    }
+    
 }

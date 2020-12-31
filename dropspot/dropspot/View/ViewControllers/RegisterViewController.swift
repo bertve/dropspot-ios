@@ -8,7 +8,7 @@
 import UIKit
 import MaterialComponents
 
-class RegisterViewController: UIViewController {
+class RegisterViewController: FormValidatingKeyboardHandlingViewController {
 
     @IBOutlet var firstName: MDCOutlinedTextField!
     @IBOutlet var lastName: MDCOutlinedTextField!
@@ -20,20 +20,15 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.formValidator = RegisterFormValidator(firstName: firstName, lastName: lastName, username: username, email: email,password: password, passwordConfirm: passwordConfirm)
+        self.fields = [firstName ,lastName ,username ,email ,password ,passwordConfirm]
+        self.formConfirmingButton = registerBtn
+        
+        password.isSecureTextEntry = true
+        passwordConfirm.isSecureTextEntry = false
+        
         applyThemeToComponents()
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     private func applyThemeToComponents(){
         Theme.applyThemeToTextField(firstName)
@@ -43,14 +38,20 @@ class RegisterViewController: UIViewController {
         Theme.applyThemeToTextField(password)
         Theme.applyThemeToTextField(passwordConfirm)
         Theme.applyThemeToButton(registerBtn)
+        firstName.label.text = "First Name"
+        lastName.label.text = "Last name"
+        username.label.text = "Username"
+        email.label.text = "Email"
+        password.label.text = "Password"
+        passwordConfirm.label.text = "Password Confirmation"
     }
-
+    
     @IBAction func registerBtnPressed(_ sender: MDCButton) {
         register()
     }
-    
+
     private func register(){
-        print("register")
+        print("first:\(String(describing: firstName)), last:\(String(describing: lastName)), username:\(String(describing: username)), email:\(String(describing: email)), password:\(String(describing: password)),confirm:\(String(describing: passwordConfirm))")
     }
     
 }

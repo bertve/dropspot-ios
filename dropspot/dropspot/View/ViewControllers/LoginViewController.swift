@@ -8,34 +8,42 @@
 import UIKit
 import MaterialComponents
 
-class LoginViewController: UIViewController {
+class LoginViewController: FormValidatingKeyboardHandlingViewController {
 
     @IBOutlet var emailOrUsername: MDCOutlinedTextField!
     @IBOutlet var password: MDCOutlinedTextField!
     @IBOutlet var registerButton: MDCButton!
     @IBOutlet var loginButton: MDCButton!
-    
-    private var formValidator : LoginFormValidator {
-        return LoginFormValidator(emailOrUsername: emailOrUsername, password: password)
-    }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        Theme.applyThemeToTextField(emailOrUsername)
-        Theme.applyThemeToTextField(password)
-        Theme.applyThemeToButton(loginButton)
-        Theme.applyThemeToButton(registerButton)
+        self.formValidator = LoginFormValidator(emailOrUsername: emailOrUsername, password: password)
+        self.fields = [emailOrUsername, password]
+        self.formConfirmingButton = loginButton
+        
+        password.isSecureTextEntry = true
+        // theme
+        applyThemeToComponents()
     }
-
+    
     @IBAction func loginButtonPressed(_ sender: MDCButton) {
         login()
     }
     
-    private func login(){
-        print("login")
+    private func applyThemeToComponents(){
+        Theme.applyThemeToTextField(emailOrUsername)
+        Theme.applyThemeToTextField(password)
+        Theme.applyThemeToButton(loginButton)
+        Theme.applyThemeToButton(registerButton)
+        
+        // floating label
+        emailOrUsername.label.text = "Email or Username"
+        password.label.text = "password"
     }
     
-
+    private func login(){
+        print("LOGIN\nusernameEmail: \(String(describing: emailOrUsername.text))\npassword: \(String(describing: password.text))")
+    }
+    
 }
 

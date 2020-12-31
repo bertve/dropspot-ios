@@ -74,7 +74,7 @@ class Theme {
         
         // small comps
         // Extended FAB,FAB,Snackbar,Textfield, Button, Chip
-        shapeScheme.smallComponentShape = MDCShapeCategory(cornersWith: .rounded, andSize: 4)
+        shapeScheme.smallComponentShape = MDCShapeCategory(cornersWith: .rounded, andSize: 2)
         
         // medium comps: card, dialog
         shapeScheme.mediumComponentShape = MDCShapeCategory(cornersWith: .rounded, andSize: 8)

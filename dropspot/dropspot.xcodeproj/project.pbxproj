@@ -21,8 +21,14 @@
 		15C946C2259A8CFA00D970E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946C1259A8CFA00D970E9 /* RegisterViewController.swift */; };
 		15C946CF259AA2BA00D970E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946CE259AA2BA00D970E9 /* HomeViewController.swift */; };
 		15C946D5259AA66C00D970E9 /* LoginFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946D4259AA66C00D970E9 /* LoginFormValidator.swift */; };
-		15C946DD259AA9EE00D970E9 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946DC259AA9EE00D970E9 /* Validation.swift */; };
 		15C946E2259AAF2800D970E9 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946E1259AAF2800D970E9 /* AuthService.swift */; };
+		15C946EF259B9B9300D970E9 /* FormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946EE259B9B9300D970E9 /* FormValidator.swift */; };
+		15C946F4259BA49400D970E9 /* FormValidationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946F3259BA49400D970E9 /* FormValidationUtil.swift */; };
+		15C946FC259BA85C00D970E9 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946FB259BA85C00D970E9 /* Validation.swift */; };
+		15C94702259BB9B900D970E9 /* TextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C94701259BB9B900D970E9 /* TextFieldExt.swift */; };
+		15C94718259BDD9300D970E9 /* KeyboardHandlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C94717259BDD9300D970E9 /* KeyboardHandlingViewController.swift */; };
+		15C9471E259BF78C00D970E9 /* RegisterFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9471D259BF78C00D970E9 /* RegisterFormValidator.swift */; };
+		15C9472C259CD5AF00D970E9 /* FormValidatingKeyboardHandlingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9472B259CD5AF00D970E9 /* FormValidatingKeyboardHandlingViewController.swift */; };
 		353A3ADEAF442369B01931F5 /* Pods_dropspot_dropspotUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E239E1BFA4C2EDE969960B3 /* Pods_dropspot_dropspotUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,8 +70,14 @@
 		15C946C1259A8CFA00D970E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		15C946CE259AA2BA00D970E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		15C946D4259AA66C00D970E9 /* LoginFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormValidator.swift; sourceTree = "<group>"; };
-		15C946DC259AA9EE00D970E9 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		15C946E1259AAF2800D970E9 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		15C946EE259B9B9300D970E9 /* FormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidator.swift; sourceTree = "<group>"; };
+		15C946F3259BA49400D970E9 /* FormValidationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidationUtil.swift; sourceTree = "<group>"; };
+		15C946FB259BA85C00D970E9 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		15C94701259BB9B900D970E9 /* TextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExt.swift; sourceTree = "<group>"; };
+		15C94717259BDD9300D970E9 /* KeyboardHandlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHandlingViewController.swift; sourceTree = "<group>"; };
+		15C9471D259BF78C00D970E9 /* RegisterFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFormValidator.swift; sourceTree = "<group>"; };
+		15C9472B259CD5AF00D970E9 /* FormValidatingKeyboardHandlingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormValidatingKeyboardHandlingViewController.swift; sourceTree = "<group>"; };
 		291B7393A846C8E1185627D8 /* Pods-dropspot-dropspotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dropspot-dropspotUITests.release.xcconfig"; path = "Target Support Files/Pods-dropspot-dropspotUITests/Pods-dropspot-dropspotUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2C8218B93C130914FF9F8D04 /* Pods_dropspot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dropspot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E239E1BFA4C2EDE969960B3 /* Pods_dropspot_dropspotUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dropspot_dropspotUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +136,8 @@
 				15768AA72598F05000409E2B /* LoginViewController.swift */,
 				15C946C1259A8CFA00D970E9 /* RegisterViewController.swift */,
 				15C946CE259AA2BA00D970E9 /* HomeViewController.swift */,
+				15C94717259BDD9300D970E9 /* KeyboardHandlingViewController.swift */,
+				15C9472B259CD5AF00D970E9 /* FormValidatingKeyboardHandlingViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,6 +187,7 @@
 			children = (
 				15768AAE2598F05100409E2B /* LaunchScreen.storyboard */,
 				15768AA92598F05000409E2B /* Main.storyboard */,
+				15C94700259BB99200D970E9 /* Extensions */,
 				150FF5AA259913FF0027719B /* View */,
 				150FF5A7259913CB0027719B /* Models */,
 				150FF5A225990B3F0027719B /* Services */,
@@ -206,9 +221,20 @@
 			isa = PBXGroup;
 			children = (
 				15C946D4259AA66C00D970E9 /* LoginFormValidator.swift */,
-				15C946DC259AA9EE00D970E9 /* Validation.swift */,
+				15C946EE259B9B9300D970E9 /* FormValidator.swift */,
+				15C946F3259BA49400D970E9 /* FormValidationUtil.swift */,
+				15C946FB259BA85C00D970E9 /* Validation.swift */,
+				15C9471D259BF78C00D970E9 /* RegisterFormValidator.swift */,
 			);
 			path = FormValidators;
+			sourceTree = "<group>";
+		};
+		15C94700259BB99200D970E9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				15C94701259BB9B900D970E9 /* TextFieldExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		216C6FC0451DFD200EC0589C /* Pods */ = {
@@ -472,15 +498,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15C946EF259B9B9300D970E9 /* FormValidator.swift in Sources */,
 				15768AA82598F05000409E2B /* LoginViewController.swift in Sources */,
+				15C9471E259BF78C00D970E9 /* RegisterFormValidator.swift in Sources */,
+				15C946FC259BA85C00D970E9 /* Validation.swift in Sources */,
+				15C9472C259CD5AF00D970E9 /* FormValidatingKeyboardHandlingViewController.swift in Sources */,
 				15C946D5259AA66C00D970E9 /* LoginFormValidator.swift in Sources */,
 				15C946C2259A8CFA00D970E9 /* RegisterViewController.swift in Sources */,
 				15C946E2259AAF2800D970E9 /* AuthService.swift in Sources */,
 				1591E95425994B2600EEA918 /* Theme.swift in Sources */,
 				15768AA42598F05000409E2B /* AppDelegate.swift in Sources */,
 				15768AA62598F05000409E2B /* SceneDelegate.swift in Sources */,
-				15C946DD259AA9EE00D970E9 /* Validation.swift in Sources */,
+				15C94718259BDD9300D970E9 /* KeyboardHandlingViewController.swift in Sources */,
+				15C94702259BB9B900D970E9 /* TextFieldExt.swift in Sources */,
 				15C946CF259AA2BA00D970E9 /* HomeViewController.swift in Sources */,
+				15C946F4259BA49400D970E9 /* FormValidationUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
