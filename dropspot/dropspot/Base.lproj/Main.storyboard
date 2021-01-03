@@ -23,7 +23,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="242"/>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                     </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="EXu-qk-XNU">
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="EXu-qk-XNU">
                                         <rect key="frame" x="0.0" y="306" width="288" height="84"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email or Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUD-qU-VOu" customClass="MDCOutlinedTextField">
@@ -68,6 +68,7 @@
                                     <constraint firstAttribute="trailing" secondItem="EXu-qk-XNU" secondAttribute="trailing" id="uX3-wG-aqb"/>
                                 </constraints>
                                 <variation key="heightClass=compact-widthClass=compact" spacing="16"/>
+                                <variation key="heightClass=compact-widthClass=regular" spacing="32"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iHh-6I-Rph"/>
@@ -183,6 +184,7 @@
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=compact" spacing="8"/>
+                                <variation key="heightClass=compact-widthClass=regular" spacing="16"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hRL-ru-lWW"/>
@@ -190,10 +192,12 @@
                         <constraints>
                             <constraint firstItem="bPi-h8-SSH" firstAttribute="top" secondItem="hRL-ru-lWW" secondAttribute="top" constant="32" id="QAb-PO-yWO">
                                 <variation key="heightClass=compact-widthClass=compact" constant="4"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="16"/>
                             </constraint>
                             <constraint firstItem="bPi-h8-SSH" firstAttribute="leading" secondItem="hRL-ru-lWW" secondAttribute="leading" constant="32" id="azb-hS-k63"/>
                             <constraint firstItem="hRL-ru-lWW" firstAttribute="bottom" secondItem="bPi-h8-SSH" secondAttribute="bottom" constant="32" id="tHR-iY-ok3">
                                 <variation key="heightClass=compact-widthClass=compact" constant="4"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="16"/>
                             </constraint>
                             <constraint firstItem="hRL-ru-lWW" firstAttribute="trailing" secondItem="bPi-h8-SSH" secondAttribute="trailing" constant="32" id="vmD-wM-2dY"/>
                         </constraints>

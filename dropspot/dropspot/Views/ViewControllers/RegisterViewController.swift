@@ -18,6 +18,8 @@ class RegisterViewController: FormValidatingKeyboardHandlingViewController {
     @IBOutlet var passwordConfirm: MDCOutlinedTextField!
     @IBOutlet var registerBtn: MDCButton!
     
+    private let authService = AuthService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.formValidator = RegisterFormValidator(firstName: firstName, lastName: lastName, username: username, email: email,password: password, passwordConfirm: passwordConfirm)
@@ -51,7 +53,49 @@ class RegisterViewController: FormValidatingKeyboardHandlingViewController {
     }
 
     private func register(){
-        print("first:\(String(describing: firstName)), last:\(String(describing: lastName)), username:\(String(describing: username)), email:\(String(describing: email)), password:\(String(describing: password)),confirm:\(String(describing: passwordConfirm))")
+        
+        if let firstName = firstName.text?.trim(),
+           let lastName = lastName.text?.trim(),
+           let username = username.text?.trim(),
+           let password = password.text?.trim(),
+           let email = email.text?.trim(){
+            
+            let requestModel = RegisterRequestModel(firstName: firstName,
+                                                    lastName: lastName,
+                                                    username: username,
+                                                    password: password,
+                                                    email: email)
+                
+            authService.register(registerRequestModel: requestModel , completion: { (res) in
+                switch (res) {
+                case .success(let messageRes):
+                    DispatchQueue.main.async {
+                        self.handleRegisterSuccess(messageRes)
+                    }
+                case .failure(let error):
+                    DispatchQueue.main.async {
+                        self.handleRegisterFailure(error)
+                    }
+                }
+            })
+        }
+
+    }
+    
+    private func handleRegisterSuccess(_ messageResponse: MessageResponse){
+        if messageResponse.success{
+            if let presenter = presentingViewController as?  LoginViewController {
+                presenter.emailOrUsername.text = self.username.text
+                presenter.password.text = self.password.text
+            }
+            dismiss(animated: true, completion: nil)
+        }else{
+            showSnackBar(message: "Register Failure: " + messageResponse.message)
+        }
+    }
+    
+    private func handleRegisterFailure(_ error: Error){
+        showSnackBar(message: "Register failure: " + error.localizedDescription)
     }
     
 }
