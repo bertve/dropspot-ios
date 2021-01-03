@@ -17,7 +17,9 @@ class RegisterViewController: FormValidatingKeyboardHandlingViewController {
     @IBOutlet var password: MDCOutlinedTextField!
     @IBOutlet var passwordConfirm: MDCOutlinedTextField!
     @IBOutlet var registerBtn: MDCButton!
+    private let activityIndicator = MDCActivityIndicator()
     
+    @IBOutlet var contentStack: UIStackView!
     private let authService = AuthService()
     
     override func viewDidLoad() {
@@ -28,7 +30,9 @@ class RegisterViewController: FormValidatingKeyboardHandlingViewController {
         
         password.isSecureTextEntry = true
         passwordConfirm.isSecureTextEntry = false
-        
+        activityIndicator.cycleColors = [Theme.globalColorSheme().secondaryColor]
+        activityIndicator.sizeToFit()
+        contentStack.addArrangedSubview(activityIndicator)
         applyThemeToComponents()
     }
     
@@ -59,6 +63,7 @@ class RegisterViewController: FormValidatingKeyboardHandlingViewController {
            let username = username.text?.trim(),
            let password = password.text?.trim(),
            let email = email.text?.trim(){
+            activityIndicator.startAnimating()
             
             let requestModel = RegisterRequestModel(firstName: firstName,
                                                     lastName: lastName,
@@ -83,6 +88,7 @@ class RegisterViewController: FormValidatingKeyboardHandlingViewController {
     }
     
     private func handleRegisterSuccess(_ messageResponse: MessageResponse){
+        activityIndicator.stopAnimating()
         if messageResponse.success{
             if let presenter = presentingViewController as?  LoginViewController {
                 presenter.emailOrUsername.text = self.username.text
@@ -95,6 +101,7 @@ class RegisterViewController: FormValidatingKeyboardHandlingViewController {
     }
     
     private func handleRegisterFailure(_ error: Error){
+        activityIndicator.stopAnimating()
         showSnackBar(message: "Register failure: " + error.localizedDescription)
     }
     

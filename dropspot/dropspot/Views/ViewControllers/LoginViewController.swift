@@ -14,7 +14,8 @@ class LoginViewController: FormValidatingKeyboardHandlingViewController {
     @IBOutlet var password: MDCOutlinedTextField!
     @IBOutlet var registerButton: MDCButton!
     @IBOutlet var loginButton: MDCButton!
-    
+    @IBOutlet var contentStack: UIStackView!
+    private let activityIndicator: MDCActivityIndicator = MDCActivityIndicator()
     private let authService = AuthService()
         
     override func viewDidLoad() {
@@ -24,6 +25,10 @@ class LoginViewController: FormValidatingKeyboardHandlingViewController {
         self.formConfirmingButton = loginButton
         
         password.isSecureTextEntry = true
+        activityIndicator.sizeToFit()
+        activityIndicator.cycleColors = [Theme.globalColorSheme().secondaryColor]
+        contentStack.addArrangedSubview(activityIndicator)
+        
         // theme
         applyThemeToComponents()
         checkIfAlreadyLoggedIn()
@@ -47,6 +52,7 @@ class LoginViewController: FormValidatingKeyboardHandlingViewController {
     private func login(){
         if let usernameOrEmail = emailOrUsername.text?.trim(),
            let password = password.text?.trim() {
+            activityIndicator.startAnimating()
             authService.login(loginRequestModel: LoginRequestModel(usernameOrEmail: usernameOrEmail.trimmingCharacters(in: .whitespacesAndNewlines), password: password.trimmingCharacters(in: .whitespacesAndNewlines))){ (res) in
                 switch (res) {
                     case .success(let jwtResponse):
@@ -66,6 +72,7 @@ class LoginViewController: FormValidatingKeyboardHandlingViewController {
     
     private func handleLoginSuccess(_ jwtResponse: JwtResponse){
         print(jwtResponse.message)
+        activityIndicator.stopAnimating()
         if jwtResponse.success {
 
             // store token in keychain
@@ -95,6 +102,7 @@ class LoginViewController: FormValidatingKeyboardHandlingViewController {
     }
     
     private func handleLoginFailure(_ error: Error){
+        activityIndicator.stopAnimating()
         showSnackBar(message: "Login Failed: " + error.localizedDescription)
     }
     

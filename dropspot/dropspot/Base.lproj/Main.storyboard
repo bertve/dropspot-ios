@@ -89,6 +89,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="contentStack" destination="nW0-U2-dji" id="kWd-dL-6Z5"/>
                         <outlet property="emailOrUsername" destination="eUD-qU-VOu" id="TpG-gC-Pff"/>
                         <outlet property="loginButton" destination="M7I-50-QlL" id="Fli-0v-5Zi"/>
                         <outlet property="password" destination="Omg-fK-4Cw" id="Nb2-wG-lSd"/>
@@ -204,6 +205,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="WGQ-U8-T44"/>
                     <connections>
+                        <outlet property="contentStack" destination="bPi-h8-SSH" id="PhH-Ru-GWi"/>
                         <outlet property="email" destination="bQS-uC-sN7" id="GI1-Z1-d45"/>
                         <outlet property="firstName" destination="9jq-KB-2km" id="6Qm-Li-yxS"/>
                         <outlet property="lastName" destination="PkL-0Z-sCk" id="uZO-ND-1JJ"/>

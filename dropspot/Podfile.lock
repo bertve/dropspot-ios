@@ -1,4 +1,9 @@
 PODS:
+  - MaterialComponents/ActivityIndicator (119.3.0):
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Application
+    - MDFInternationalization
+    - MotionAnimator (~> 2.0)
   - MaterialComponents/AnimationTiming (119.3.0)
   - MaterialComponents/AppBar (119.3.0):
     - MaterialComponents/FlexibleHeader
@@ -246,8 +251,12 @@ PODS:
     - MDFTextAccessibility
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.0)
+  - MotionAnimator (2.8.1):
+    - MotionInterchange (~> 1.6)
+  - MotionInterchange (1.6.0)
 
 DEPENDENCIES:
+  - MaterialComponents/ActivityIndicator
   - MaterialComponents/AppBar
   - MaterialComponents/Buttons
   - "MaterialComponents/Buttons+Theming"
@@ -271,12 +280,16 @@ SPEC REPOS:
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
+    - MotionAnimator
+    - MotionInterchange
 
 SPEC CHECKSUMS:
   MaterialComponents: 49658f0fd7ef6e098e9943fce3f293e700595570
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
+  MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
+  MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
 
-PODFILE CHECKSUM: 72ced317dad7b3805364f49474b9ebc67cba2e2f
+PODFILE CHECKSUM: 9253e225601b85d8612bfaacae862f29faa5edbd
 
 COCOAPODS: 1.10.0

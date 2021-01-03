@@ -6,11 +6,11 @@
 //
 
 import Foundation
-import MaterialComponents.MaterialColorScheme
+import MaterialComponents
 
-// SOURCE: https://omaralbeik.com/blog/uicolor-from-hex
 extension UIColor {
 
+    // SOURCE: https://omaralbeik.com/blog/uicolor-from-hex
     convenience init?(hex: String) {
         var hexString = hex
 
@@ -57,7 +57,7 @@ extension UIColor {
 
 }
 
-    
+
 class Theme {
     
     static func globalContainerSheme() -> MDCContainerScheming {
@@ -93,7 +93,7 @@ class Theme {
         return shapeScheme
     }
     
-    private static func globalColorSheme() -> MDCSemanticColorScheme {
+    static func globalColorSheme() -> MDCSemanticColorScheme {
         let colorSheme = MDCSemanticColorScheme()
         colorSheme.primaryColor = UIColor(hex:"#27353d")!
         colorSheme.primaryColorVariant = UIColor(hex: "#505f67")!
