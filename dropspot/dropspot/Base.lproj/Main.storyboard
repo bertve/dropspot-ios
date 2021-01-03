@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="nW0-U2-dji">
                                 <rect key="frame" x="16" y="32" width="288" height="504"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="240" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="sij-St-O8v">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="240" image="logo-themed" translatesAutoresizingMaskIntoConstraints="NO" id="sij-St-O8v">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="242"/>
                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                     </imageView>
@@ -256,7 +256,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="95.800003051757812" height="94.150001525878906"/>
+        <image name="logo-themed" width="95.800003051757812" height="94.150001525878906"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

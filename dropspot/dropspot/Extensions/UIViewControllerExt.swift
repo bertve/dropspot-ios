@@ -16,5 +16,4 @@ extension UIViewController {
         MDCSnackbarManager.default.show(sbMessage)
     }
     
-
 }
