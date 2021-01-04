@@ -17,7 +17,9 @@ class LoginViewController: FormValidatingKeyboardHandlingViewController {
     @IBOutlet var contentStack: UIStackView!
     private let activityIndicator: MDCActivityIndicator = MDCActivityIndicator()
     private let authService = AuthService()
-        
+    
+    static let notificationLoginSuccess = NSNotification.Name(rawValue: "LoginSuccess")
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.formValidator = LoginFormValidator(emailOrUsername: emailOrUsername, password: password)
@@ -31,7 +33,6 @@ class LoginViewController: FormValidatingKeyboardHandlingViewController {
         
         // theme
         applyThemeToComponents()
-        checkIfAlreadyLoggedIn()
     }
     
     @IBAction func loginButtonPressed(_ sender: MDCButton) {
@@ -53,7 +54,7 @@ class LoginViewController: FormValidatingKeyboardHandlingViewController {
         if let usernameOrEmail = emailOrUsername.text?.trim(),
            let password = password.text?.trim() {
             activityIndicator.startAnimating()
-            authService.login(loginRequestModel: LoginRequestModel(usernameOrEmail: usernameOrEmail.trimmingCharacters(in: .whitespacesAndNewlines), password: password.trimmingCharacters(in: .whitespacesAndNewlines))){ (res) in
+            authService.login(loginRequestModel: LoginRequestModel(usernameOrEmail: usernameOrEmail.trim(), password: password.trim())){ (res) in
                 switch (res) {
                     case .success(let jwtResponse):
                         print(jwtResponse.token)
@@ -86,9 +87,10 @@ class LoginViewController: FormValidatingKeyboardHandlingViewController {
                 SecItemAdd(query as CFDictionary, nil)
             }
             
-            // store user
+            // store user in userdefaults
             let userData = try? JSONEncoder().encode(jwtResponse.user)
             UserDefaults.standard.set(userData, forKey: "loggedInUser")
+            
             // nav to home
             navigateToHome()
             
@@ -98,30 +100,12 @@ class LoginViewController: FormValidatingKeyboardHandlingViewController {
     }
     
     private func navigateToHome(){
-        performSegue(withIdentifier: "loginSuccess", sender: self)
+        NotificationCenter.default.post(name: LoginViewController.notificationLoginSuccess, object: nil)
     }
     
     private func handleLoginFailure(_ error: Error){
         activityIndicator.stopAnimating()
         showSnackBar(message: "Login Failed: " + error.localizedDescription)
-    }
-    
-    private func checkIfAlreadyLoggedIn(){
-        let query = [kSecClass as String: kSecClassGenericPassword as String,
-                         kSecAttrAccount as String: "token",
-                         kSecReturnData as String: kCFBooleanTrue,
-                         kSecMatchLimit as String: kSecMatchLimitOne] as [String: Any]
-
-            var dataTypeRef: AnyObject?
-            let status: OSStatus = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
-            if status == noErr {
-                if let data = dataTypeRef as? Data {
-                    let token = String(decoding: data, as: UTF8.self)
-                    print(token)
-                    navigateToHome()
-                }
-                
-            }
     }
     
 }

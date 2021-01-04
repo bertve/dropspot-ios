@@ -6,31 +6,58 @@
 //
 
 import UIKit
+import MaterialComponents
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        if let token = checkIfAlreadyLoggedIn() {
+            print(token)
+            let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+            let rootVC = storyBoard.instantiateViewController(withIdentifier: "rootNav")
+            self.window?.rootViewController = rootVC
+        } else {
+            print("not logged in")
+            let storyBoard = UIStoryboard(name: "Auth", bundle: Bundle.main)
+            let loginVC = storyBoard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+            self.window?.rootViewController = loginVC
+        }
+        
+        NotificationCenter.default.addObserver(self, selector:#selector(changeRootToHome(notification:)),name:LoginViewController.notificationLoginSuccess,object: nil)
+        
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
+    
+    private func checkIfAlreadyLoggedIn() -> String? {
+       let query = [kSecClass as String: kSecClassGenericPassword as String,
+                         kSecAttrAccount as String: "token",
+                         kSecReturnData as String: kCFBooleanTrue,
+                         kSecMatchLimit as String: kSecMatchLimitOne] as [String: Any]
 
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+            var dataTypeRef: AnyObject?
+            let status: OSStatus = SecItemCopyMatching(query as CFDictionary, &dataTypeRef)
+            if status == noErr {
+                if let data = dataTypeRef as? Data {
+                    let token = String(decoding: data, as: UTF8.self)
+                    return token
+                }
+            }
+        return nil
     }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    
+    @objc func changeRootToHome(notification: Notification) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let rootVC = storyBoard.instantiateViewController(withIdentifier: "rootNav")
+        self.window?.rootViewController = rootVC
     }
-
 
 }
 

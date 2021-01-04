@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="KKt-n8-jcs">
+            <objects>
+                <viewController id="zZv-hi-sZD" customClass="HomeViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VYQ-k1-SdT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBp-6M-Bgj">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <connections>
+                                    <segue destination="I3g-EM-aMo" kind="embed" id="cEi-6H-mwF"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SAP-kJ-ARx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IBp-6M-Bgj" firstAttribute="leading" secondItem="SAP-kJ-ARx" secondAttribute="leading" id="Ac6-0H-sN3"/>
+                            <constraint firstItem="SAP-kJ-ARx" firstAttribute="trailing" secondItem="IBp-6M-Bgj" secondAttribute="trailing" id="G8s-rH-bg9"/>
+                            <constraint firstItem="IBp-6M-Bgj" firstAttribute="top" secondItem="SAP-kJ-ARx" secondAttribute="top" id="XLC-iY-2FS"/>
+                            <constraint firstItem="SAP-kJ-ARx" firstAttribute="bottom" secondItem="IBp-6M-Bgj" secondAttribute="bottom" id="faA-Og-8IG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pTF-By-jF5">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu-white" id="Osk-8B-CTR">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="menuBtnPressed:" destination="zZv-hi-sZD" id="Ohx-Ax-AJ4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qEk-aZ-haD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2059" y="331"/>
+        </scene>
+        <!--App Bar Navigation Controller-->
+        <scene sceneID="7D2-jc-hkG">
+            <objects>
+                <navigationController storyboardIdentifier="rootNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9SU-YV-7tl" customClass="MDCAppBarNavigationController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ug-sA-y1l">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="PrimaryColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zZv-hi-sZD" kind="relationship" relationship="rootViewController" id="17q-Az-oQa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWw-n6-31l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3030" y="0.0"/>
+        </scene>
+        <!--Nav Drawer Content View Controller-->
+        <scene sceneID="0Uq-2z-3Mb">
+            <objects>
+                <viewController id="mLI-Ht-Tay" customClass="NavDrawerContentViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EcI-VG-qsz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLE-ky-wLw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="38"/>
+                                <color key="tintColor" name="PrimaryColor"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Me" image="person.fill" catalog="system">
+                                    <color key="titleColor" name="PrimaryColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="mePressed:" destination="mLI-Ht-Tay" eventType="touchUpInside" id="xGy-JQ-n6g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8R2-hg-iAB">
+                                <rect key="frame" x="0.0" y="82" width="414" height="38"/>
+                                <color key="tintColor" name="PrimaryColor"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Spots" image="mappin.and.ellipse" catalog="system">
+                                    <color key="titleColor" name="PrimaryColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="spotsPressed:" destination="mLI-Ht-Tay" eventType="touchUpInside" id="YYJ-JQ-2qJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABz-V0-lih">
+                                <rect key="frame" x="0.0" y="120" width="414" height="38"/>
+                                <color key="tintColor" name="PrimaryColor"/>
+                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="log Out" image="lock.fill" catalog="system">
+                                    <color key="titleColor" name="PrimaryColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutPressed:" destination="mLI-Ht-Tay" eventType="touchUpInside" id="4HF-R2-ArE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="eZF-7a-4V1"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eZF-7a-4V1" firstAttribute="trailing" secondItem="ABz-V0-lih" secondAttribute="trailing" id="32X-tH-5PT"/>
+                            <constraint firstItem="8R2-hg-iAB" firstAttribute="top" secondItem="QLE-ky-wLw" secondAttribute="bottom" id="CvS-tt-buv"/>
+                            <constraint firstItem="ABz-V0-lih" firstAttribute="top" secondItem="8R2-hg-iAB" secondAttribute="bottom" id="LHq-NV-dZW"/>
+                            <constraint firstItem="eZF-7a-4V1" firstAttribute="trailing" secondItem="QLE-ky-wLw" secondAttribute="trailing" id="QDb-pg-lOg"/>
+                            <constraint firstItem="eZF-7a-4V1" firstAttribute="trailing" secondItem="8R2-hg-iAB" secondAttribute="trailing" id="Qsm-lW-2AO"/>
+                            <constraint firstItem="QLE-ky-wLw" firstAttribute="top" secondItem="eZF-7a-4V1" secondAttribute="top" id="aTa-IJ-VUr"/>
+                            <constraint firstItem="8R2-hg-iAB" firstAttribute="leading" secondItem="eZF-7a-4V1" secondAttribute="leading" id="nbK-xz-hQp"/>
+                            <constraint firstItem="ABz-V0-lih" firstAttribute="leading" secondItem="eZF-7a-4V1" secondAttribute="leading" id="tVv-uQ-RKl"/>
+                            <constraint firstItem="QLE-ky-wLw" firstAttribute="leading" secondItem="eZF-7a-4V1" secondAttribute="leading" id="wue-am-sEp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8B9-1i-M68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2059" y="-896"/>
+        </scene>
+        <!--Nav Drawer Header View Controller-->
+        <scene sceneID="RTE-qu-7OW">
+            <objects>
+                <viewController id="DaW-se-BDb" customClass="NavDrawerHeaderViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Im-5b-YDx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyF-X4-Xwp">
+                                <rect key="frame" x="180" y="437.5" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A0O-dd-UGl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HyF-X4-Xwp" firstAttribute="centerY" secondItem="1Im-5b-YDx" secondAttribute="centerY" id="ju1-DB-MFD"/>
+                            <constraint firstItem="HyF-X4-Xwp" firstAttribute="centerX" secondItem="1Im-5b-YDx" secondAttribute="centerX" id="pl1-b6-Xcn"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QjU-kV-tak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3030.434782608696" y="-896.65178571428567"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="4VZ-EI-HfN">
+            <objects>
+                <viewController id="I3g-EM-aMo" customClass="MapViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WOF-jL-LMc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zk5-7e-7an" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1043" y="372"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lock.fill" catalog="system" width="128" height="128"/>
+        <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
+        <image name="menu-white" width="24" height="24"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <namedColor name="PrimaryColor">
+            <color red="0.15294117647058825" green="0.20784313725490197" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -16,6 +16,9 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
     - MDFInternationalization
+  - "MaterialComponents/AppBar+Theming (119.3.0)":
+    - MaterialComponents/AppBar
+    - MaterialComponents/schemes/Container
   - MaterialComponents/Availability (119.3.0)
   - MaterialComponents/ButtonBar (119.3.0):
     - MaterialComponents/Buttons
@@ -102,6 +105,9 @@ PODS:
     - MaterialComponents/private/Math
     - MaterialComponents/private/UIMetrics
     - MaterialComponents/ShadowLayer
+  - "MaterialComponents/NavigationDrawer+Theming (119.3.0)":
+    - MaterialComponents/NavigationDrawer
+    - MaterialComponents/schemes/Container
   - MaterialComponents/OverlayWindow (119.3.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Application
@@ -258,11 +264,13 @@ PODS:
 DEPENDENCIES:
   - MaterialComponents/ActivityIndicator
   - MaterialComponents/AppBar
+  - "MaterialComponents/AppBar+Theming"
   - MaterialComponents/Buttons
   - "MaterialComponents/Buttons+Theming"
   - MaterialComponents/Cards
   - MaterialComponents/Dialogs
   - MaterialComponents/NavigationDrawer
+  - "MaterialComponents/NavigationDrawer+Theming"
   - MaterialComponents/schemes/Color
   - MaterialComponents/Slider
   - MaterialComponents/Snackbar
@@ -290,6 +298,6 @@ SPEC CHECKSUMS:
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
 
-PODFILE CHECKSUM: 9253e225601b85d8612bfaacae862f29faa5edbd
+PODFILE CHECKSUM: 3447b46b89d8b90cab9c0cf0090c65435b89fd0e
 
 COCOAPODS: 1.10.0
