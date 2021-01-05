@@ -9,12 +9,11 @@
 /* Begin PBXBuildFile section */
 		010EE1877516C5DD7005AFC8 /* Pods_dropspot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8218B93C130914FF9F8D04 /* Pods_dropspot.framework */; };
 		09E95C612A96DD7D4E7BABC1 /* Pods_dropspotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FE6C714F5AB38D321DB5609 /* Pods_dropspotTests.framework */; };
+		1510667F25A51B6000939D36 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1510667E25A51B6000939D36 /* UserDefaultsHelper.swift */; };
 		152063C125A12AE500BAD678 /* RegisterRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152063C025A12AE500BAD678 /* RegisterRequestModel.swift */; };
 		152063C625A12D3300BAD678 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152063C525A12D3300BAD678 /* RegisterRequest.swift */; };
 		152063CB25A136E300BAD678 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152063CA25A136E300BAD678 /* UIViewControllerExt.swift */; };
 		152063D025A13CCF00BAD678 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152063CF25A13CCF00BAD678 /* StringExt.swift */; };
-		1532721525A35C73004D4E76 /* menu-24px.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1532721425A35C73004D4E76 /* menu-24px.svg */; };
-		1532721A25A35CC1004D4E76 /* menu-white-24dp.svg in Resources */ = {isa = PBXBuildFile; fileRef = 1532721925A35CC1004D4E76 /* menu-white-24dp.svg */; };
 		1532722725A367B0004D4E76 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1532722625A367B0004D4E76 /* MapViewController.swift */; };
 		15768AA42598F05000409E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15768AA32598F05000409E2B /* AppDelegate.swift */; };
 		15768AA82598F05000409E2B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15768AA72598F05000409E2B /* LoginViewController.swift */; };
@@ -25,8 +24,9 @@
 		15768AC62598F05100409E2B /* dropspotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15768AC52598F05100409E2B /* dropspotUITests.swift */; };
 		1591E95425994B2600EEA918 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1591E95325994B2600EEA918 /* Theme.swift */; };
 		1595248625A2634F00EA7D2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1595248525A2634F00EA7D2A /* Main.storyboard */; };
-		1595248E25A2730500EA7D2A /* NavDrawerHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1595248D25A2730500EA7D2A /* NavDrawerHeaderViewController.swift */; };
 		1595249625A2731900EA7D2A /* NavDrawerContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1595249525A2731900EA7D2A /* NavDrawerContentViewController.swift */; };
+		159EAABF25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159EAABE25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift */; };
+		159EAAC725A4CE0900EF8B1A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159EAAC625A4CE0900EF8B1A /* TestViewController.swift */; };
 		15C946C2259A8CFA00D970E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946C1259A8CFA00D970E9 /* RegisterViewController.swift */; };
 		15C946CF259AA2BA00D970E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946CE259AA2BA00D970E9 /* HomeViewController.swift */; };
 		15C946D5259AA66C00D970E9 /* LoginFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946D4259AA66C00D970E9 /* LoginFormValidator.swift */; };
@@ -77,12 +77,11 @@
 /* Begin PBXFileReference section */
 		02A455FF9246A5813AC78F2E /* Pods-dropspot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dropspot.release.xcconfig"; path = "Target Support Files/Pods-dropspot/Pods-dropspot.release.xcconfig"; sourceTree = "<group>"; };
 		0831060BD7D927D379E9DF6F /* Pods-dropspotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dropspotTests.release.xcconfig"; path = "Target Support Files/Pods-dropspotTests/Pods-dropspotTests.release.xcconfig"; sourceTree = "<group>"; };
+		1510667E25A51B6000939D36 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		152063C025A12AE500BAD678 /* RegisterRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequestModel.swift; sourceTree = "<group>"; };
 		152063C525A12D3300BAD678 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		152063CA25A136E300BAD678 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		152063CF25A13CCF00BAD678 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
-		1532721425A35C73004D4E76 /* menu-24px.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "menu-24px.svg"; path = "../../../../../Downloads/menu-24px.svg"; sourceTree = "<group>"; };
-		1532721925A35CC1004D4E76 /* menu-white-24dp.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "menu-white-24dp.svg"; path = "../../../../../Downloads/menu-white-24dp.svg"; sourceTree = "<group>"; };
 		1532722625A367B0004D4E76 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		15768AA02598F05000409E2B /* dropspot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dropspot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15768AA32598F05000409E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,8 +98,9 @@
 		15768AC72598F05100409E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1591E95325994B2600EEA918 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		1595248525A2634F00EA7D2A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		1595248D25A2730500EA7D2A /* NavDrawerHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavDrawerHeaderViewController.swift; sourceTree = "<group>"; };
 		1595249525A2731900EA7D2A /* NavDrawerContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavDrawerContentViewController.swift; sourceTree = "<group>"; };
+		159EAABE25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavDrawerNavigationDelegate.swift; sourceTree = "<group>"; };
+		159EAAC625A4CE0900EF8B1A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		15C946C1259A8CFA00D970E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		15C946CE259AA2BA00D970E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		15C946D4259AA66C00D970E9 /* LoginFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormValidator.swift; sourceTree = "<group>"; };
@@ -179,6 +179,8 @@
 		150FF5A7259913CB0027719B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1510667D25A51B2E00939D36 /* Helpers */,
+				159EAABD25A4B96B00EF8B1A /* Delegates */,
 				15C946D3259AA65800D970E9 /* FormValidators */,
 				15C94765259D5FB900D970E9 /* ResponseModels */,
 				15C94764259D5F9F00D970E9 /* RequestsModels */,
@@ -216,6 +218,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		1510667D25A51B2E00939D36 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1510667E25A51B6000939D36 /* UserDefaultsHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		15768A972598F05000409E2B = {
 			isa = PBXGroup;
 			children = (
@@ -248,8 +258,6 @@
 				150FF5A225990B3F0027719B /* Services */,
 				15768AA32598F05000409E2B /* AppDelegate.swift */,
 				15768AAC2598F05100409E2B /* Assets.xcassets */,
-				1532721925A35CC1004D4E76 /* menu-white-24dp.svg */,
-				1532721425A35C73004D4E76 /* menu-24px.svg */,
 				15768AB12598F05100409E2B /* Info.plist */,
 			);
 			path = dropspot;
@@ -276,8 +284,8 @@
 		1595247625A25A8300EA7D2A /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				15768AA92598F05000409E2B /* Auth.storyboard */,
 				15768AAE2598F05100409E2B /* LaunchScreen.storyboard */,
+				15768AA92598F05000409E2B /* Auth.storyboard */,
 				1595248525A2634F00EA7D2A /* Main.storyboard */,
 			);
 			path = StoryBoards;
@@ -304,20 +312,20 @@
 		1595247C25A25BB900EA7D2A /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				1595249A25A2732000EA7D2A /* NavigationDrawer */,
+				1595249525A2731900EA7D2A /* NavDrawerContentViewController.swift */,
 				15C946CE259AA2BA00D970E9 /* HomeViewController.swift */,
 				1532722625A367B0004D4E76 /* MapViewController.swift */,
+				159EAAC625A4CE0900EF8B1A /* TestViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		1595249A25A2732000EA7D2A /* NavigationDrawer */ = {
+		159EAABD25A4B96B00EF8B1A /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
-				1595249525A2731900EA7D2A /* NavDrawerContentViewController.swift */,
-				1595248D25A2730500EA7D2A /* NavDrawerHeaderViewController.swift */,
+				159EAABE25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift */,
 			);
-			path = NavigationDrawer;
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 		15C946D3259AA65800D970E9 /* FormValidators */ = {
@@ -516,11 +524,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				15768AB02598F05100409E2B /* LaunchScreen.storyboard in Resources */,
-				1532721525A35C73004D4E76 /* menu-24px.svg in Resources */,
 				15768AAD2598F05100409E2B /* Assets.xcassets in Resources */,
 				15768AAB2598F05000409E2B /* Auth.storyboard in Resources */,
 				1595248625A2634F00EA7D2A /* Main.storyboard in Resources */,
-				1532721A25A35CC1004D4E76 /* menu-white-24dp.svg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +664,7 @@
 				1532722725A367B0004D4E76 /* MapViewController.swift in Sources */,
 				15C946FC259BA85C00D970E9 /* Validation.swift in Sources */,
 				15C94750259D5B2D00D970E9 /* SpotsRequest.swift in Sources */,
+				159EAABF25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift in Sources */,
 				15C9472C259CD5AF00D970E9 /* FormValidatingKeyboardHandlingViewController.swift in Sources */,
 				152063CB25A136E300BAD678 /* UIViewControllerExt.swift in Sources */,
 				15C946D5259AA66C00D970E9 /* LoginFormValidator.swift in Sources */,
@@ -667,13 +674,14 @@
 				15C94767259D5FE600D970E9 /* JwtResponse.swift in Sources */,
 				15C947A9259E280100D970E9 /* ResourceApiRequest.swift in Sources */,
 				15C946E2259AAF2800D970E9 /* AuthService.swift in Sources */,
+				159EAAC725A4CE0900EF8B1A /* TestViewController.swift in Sources */,
 				1595249625A2731900EA7D2A /* NavDrawerContentViewController.swift in Sources */,
 				15C94774259D631500D970E9 /* MessageResponse.swift in Sources */,
 				1591E95425994B2600EEA918 /* Theme.swift in Sources */,
-				1595248E25A2730500EA7D2A /* NavDrawerHeaderViewController.swift in Sources */,
 				15768AA42598F05000409E2B /* AppDelegate.swift in Sources */,
 				152063C125A12AE500BAD678 /* RegisterRequestModel.swift in Sources */,
 				15C94736259D5A4000D970E9 /* SpotService.swift in Sources */,
+				1510667F25A51B6000939D36 /* UserDefaultsHelper.swift in Sources */,
 				152063D025A13CCF00BAD678 /* StringExt.swift in Sources */,
 				152063C625A12D3300BAD678 /* RegisterRequest.swift in Sources */,
 				15C94718259BDD9300D970E9 /* KeyboardHandlingViewController.swift in Sources */,

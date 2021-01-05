@@ -6,13 +6,14 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
         <scene sceneID="KKt-n8-jcs">
             <objects>
-                <viewController id="zZv-hi-sZD" customClass="HomeViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" id="zZv-hi-sZD" customClass="HomeViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VYQ-k1-SdT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,24 +38,35 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="menu-white" id="Osk-8B-CTR">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="menuBtnPressed:" destination="zZv-hi-sZD" id="Ohx-Ax-AJ4"/>
+                                <action selector="menuPressed:" destination="zZv-hi-sZD" id="qlI-o9-bDZ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="psa-mg-fd9" kind="show" identifier="toSpots" id="hOW-hz-Syc"/>
+                        <segue destination="GJJ-Jm-iJI" kind="show" identifier="test" id="cyl-Tf-hAI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qEk-aZ-haD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2059" y="331"/>
+            <point key="canvasLocation" x="-2687" y="656"/>
         </scene>
         <!--App Bar Navigation Controller-->
         <scene sceneID="7D2-jc-hkG">
             <objects>
                 <navigationController storyboardIdentifier="rootNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9SU-YV-7tl" customClass="MDCAppBarNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1ug-sA-y1l">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="ic_arrow_back" id="1ug-sA-y1l">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" name="PrimaryColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -63,98 +75,101 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWw-n6-31l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3030" y="0.0"/>
+            <point key="canvasLocation" x="-3551" y="656"/>
         </scene>
         <!--Nav Drawer Content View Controller-->
         <scene sceneID="0Uq-2z-3Mb">
             <objects>
-                <viewController id="mLI-Ht-Tay" customClass="NavDrawerContentViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="navContent" id="mLI-Ht-Tay" customClass="NavDrawerContentViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EcI-VG-qsz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLE-ky-wLw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="38"/>
-                                <color key="tintColor" name="PrimaryColor"/>
-                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
-                                <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Me" image="person.fill" catalog="system">
-                                    <color key="titleColor" name="PrimaryColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="mePressed:" destination="mLI-Ht-Tay" eventType="touchUpInside" id="xGy-JQ-n6g"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8R2-hg-iAB">
-                                <rect key="frame" x="0.0" y="82" width="414" height="38"/>
-                                <color key="tintColor" name="PrimaryColor"/>
-                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
-                                <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="Spots" image="mappin.and.ellipse" catalog="system">
-                                    <color key="titleColor" name="PrimaryColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="spotsPressed:" destination="mLI-Ht-Tay" eventType="touchUpInside" id="YYJ-JQ-2qJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABz-V0-lih">
-                                <rect key="frame" x="0.0" y="120" width="414" height="38"/>
-                                <color key="tintColor" name="PrimaryColor"/>
-                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
-                                <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="log Out" image="lock.fill" catalog="system">
-                                    <color key="titleColor" name="PrimaryColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="logOutPressed:" destination="mLI-Ht-Tay" eventType="touchUpInside" id="4HF-R2-ArE"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="yGr-5U-kIf" userLabel="content container">
+                                <rect key="frame" x="0.0" y="44" width="414" height="400"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KS0-fC-qc2" userLabel="profile container">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="238"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="1" ambiguous="YES" image="skater_profile" translatesAutoresizingMaskIntoConstraints="NO" id="ycv-rF-OZY">
+                                                <rect key="frame" x="16" y="16" width="382" height="180.5"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" ambiguous="YES" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hY-9b-MwV">
+                                                <rect key="frame" x="160" y="204.5" width="94" height="25.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="16" bottom="8" trailing="16"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZA1-ro-h5X" userLabel="nav items">
+                                        <rect key="frame" x="0.0" y="270" width="414" height="130"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLE-ky-wLw">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="38"/>
+                                                <color key="tintColor" name="PrimaryColor"/>
+                                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                                <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Me" image="person.fill" catalog="system">
+                                                    <color key="titleColor" name="PrimaryColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="mePressed:" destination="mLI-Ht-Tay" eventType="touchUpInside" id="xGy-JQ-n6g"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8R2-hg-iAB">
+                                                <rect key="frame" x="0.0" y="46" width="414" height="38"/>
+                                                <color key="tintColor" name="PrimaryColor"/>
+                                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                                <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Spots" image="mappin.and.ellipse" catalog="system">
+                                                    <color key="titleColor" name="PrimaryColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="spotsPressed:" destination="mLI-Ht-Tay" eventType="touchUpInside" id="YYJ-JQ-2qJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABz-V0-lih">
+                                                <rect key="frame" x="0.0" y="92" width="414" height="38"/>
+                                                <color key="tintColor" name="PrimaryColor"/>
+                                                <inset key="contentEdgeInsets" minX="16" minY="8" maxX="16" maxY="8"/>
+                                                <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="log Out" image="lock.fill" catalog="system">
+                                                    <color key="titleColor" name="PrimaryColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="logOutPressed:" destination="mLI-Ht-Tay" eventType="touchUpInside" id="4HF-R2-ArE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="Auu-GW-RUF">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="250"/>
+                                    </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="ZA1-ro-h5X" secondAttribute="trailing" id="INv-HP-Qo6"/>
+                                    <constraint firstItem="ZA1-ro-h5X" firstAttribute="leading" secondItem="yGr-5U-kIf" secondAttribute="leading" id="eV9-N5-gUM"/>
+                                </constraints>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="16"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eZF-7a-4V1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="eZF-7a-4V1" firstAttribute="trailing" secondItem="ABz-V0-lih" secondAttribute="trailing" id="32X-tH-5PT"/>
-                            <constraint firstItem="8R2-hg-iAB" firstAttribute="top" secondItem="QLE-ky-wLw" secondAttribute="bottom" id="CvS-tt-buv"/>
-                            <constraint firstItem="ABz-V0-lih" firstAttribute="top" secondItem="8R2-hg-iAB" secondAttribute="bottom" id="LHq-NV-dZW"/>
-                            <constraint firstItem="eZF-7a-4V1" firstAttribute="trailing" secondItem="QLE-ky-wLw" secondAttribute="trailing" id="QDb-pg-lOg"/>
-                            <constraint firstItem="eZF-7a-4V1" firstAttribute="trailing" secondItem="8R2-hg-iAB" secondAttribute="trailing" id="Qsm-lW-2AO"/>
-                            <constraint firstItem="QLE-ky-wLw" firstAttribute="top" secondItem="eZF-7a-4V1" secondAttribute="top" id="aTa-IJ-VUr"/>
-                            <constraint firstItem="8R2-hg-iAB" firstAttribute="leading" secondItem="eZF-7a-4V1" secondAttribute="leading" id="nbK-xz-hQp"/>
-                            <constraint firstItem="ABz-V0-lih" firstAttribute="leading" secondItem="eZF-7a-4V1" secondAttribute="leading" id="tVv-uQ-RKl"/>
-                            <constraint firstItem="QLE-ky-wLw" firstAttribute="leading" secondItem="eZF-7a-4V1" secondAttribute="leading" id="wue-am-sEp"/>
+                            <constraint firstItem="yGr-5U-kIf" firstAttribute="top" secondItem="eZF-7a-4V1" secondAttribute="top" id="Kmi-bn-vyM"/>
+                            <constraint firstItem="eZF-7a-4V1" firstAttribute="trailing" secondItem="yGr-5U-kIf" secondAttribute="trailing" id="bNR-dI-uht"/>
+                            <constraint firstItem="yGr-5U-kIf" firstAttribute="leading" secondItem="eZF-7a-4V1" secondAttribute="leading" id="n3M-ug-NUd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="usernameLbl" destination="8hY-9b-MwV" id="ege-R5-MTD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8B9-1i-M68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2059" y="-896"/>
-        </scene>
-        <!--Nav Drawer Header View Controller-->
-        <scene sceneID="RTE-qu-7OW">
-            <objects>
-                <viewController id="DaW-se-BDb" customClass="NavDrawerHeaderViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1Im-5b-YDx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HyF-X4-Xwp">
-                                <rect key="frame" x="180" y="437.5" width="54" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="A0O-dd-UGl"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="HyF-X4-Xwp" firstAttribute="centerY" secondItem="1Im-5b-YDx" secondAttribute="centerY" id="ju1-DB-MFD"/>
-                            <constraint firstItem="HyF-X4-Xwp" firstAttribute="centerX" secondItem="1Im-5b-YDx" secondAttribute="centerX" id="pl1-b6-Xcn"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QjU-kV-tak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3030.434782608696" y="-896.65178571428567"/>
+            <point key="canvasLocation" x="-4355" y="656"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="4VZ-EI-HfN">
@@ -163,24 +178,93 @@
                     <view key="view" contentMode="scaleToFill" id="WOF-jL-LMc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="C5Z-GS-Xr7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zk5-7e-7an" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1043" y="372"/>
+            <point key="canvasLocation" x="-1772" y="672"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="GQD-nI-vou">
+            <objects>
+                <viewController id="GJJ-Jm-iJI" customClass="TestViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5VK-MX-oEr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEEEEEEEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIK-vX-fvv">
+                                <rect key="frame" x="157.5" y="438" width="99" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yEs-dr-A9z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HIK-vX-fvv" firstAttribute="centerY" secondItem="5VK-MX-oEr" secondAttribute="centerY" id="gKW-IA-gT1"/>
+                            <constraint firstItem="HIK-vX-fvv" firstAttribute="centerX" secondItem="5VK-MX-oEr" secondAttribute="centerX" id="h0A-Pj-zAC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tuZ-WT-d2C"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Shz-Lb-nqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3155" y="1458"/>
+        </scene>
+        <!--Spots-->
+        <scene sceneID="eSj-Qa-POe">
+            <objects>
+                <collectionViewController id="psa-mg-fd9" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="cOE-RM-9Au">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gsf-qZ-cOq">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lv3-Ba-JHx">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eIb-YR-hzY">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="psa-mg-fd9" id="4cC-f3-Dyn"/>
+                            <outlet property="delegate" destination="psa-mg-fd9" id="4SM-ur-BeY"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Spots" id="06t-np-kGY"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EsW-OG-AKP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2307" y="1458"/>
         </scene>
     </scenes>
     <resources>
+        <image name="ic_arrow_back" width="24" height="24"/>
         <image name="lock.fill" catalog="system" width="128" height="128"/>
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="menu-white" width="24" height="24"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="skater_profile" width="512" height="512"/>
         <namedColor name="PrimaryColor">
             <color red="0.15294117647058825" green="0.20784313725490197" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

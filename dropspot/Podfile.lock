@@ -1,4 +1,5 @@
 PODS:
+  - KYDrawerController (2.1.0)
   - MaterialComponents/ActivityIndicator (119.3.0):
     - MaterialComponents/Palettes
     - MaterialComponents/private/Application
@@ -99,15 +100,6 @@ PODS:
     - MaterialComponents/Typography
     - MDFInternationalization
     - MDFTextAccessibility
-  - MaterialComponents/NavigationDrawer (119.3.0):
-    - MaterialComponents/Elevation
-    - MaterialComponents/Palettes
-    - MaterialComponents/private/Math
-    - MaterialComponents/private/UIMetrics
-    - MaterialComponents/ShadowLayer
-  - "MaterialComponents/NavigationDrawer+Theming (119.3.0)":
-    - MaterialComponents/NavigationDrawer
-    - MaterialComponents/schemes/Container
   - MaterialComponents/OverlayWindow (119.3.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Application
@@ -262,6 +254,7 @@ PODS:
   - MotionInterchange (1.6.0)
 
 DEPENDENCIES:
+  - KYDrawerController
   - MaterialComponents/ActivityIndicator
   - MaterialComponents/AppBar
   - "MaterialComponents/AppBar+Theming"
@@ -269,8 +262,6 @@ DEPENDENCIES:
   - "MaterialComponents/Buttons+Theming"
   - MaterialComponents/Cards
   - MaterialComponents/Dialogs
-  - MaterialComponents/NavigationDrawer
-  - "MaterialComponents/NavigationDrawer+Theming"
   - MaterialComponents/schemes/Color
   - MaterialComponents/Slider
   - MaterialComponents/Snackbar
@@ -285,6 +276,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - KYDrawerController
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
@@ -292,12 +284,13 @@ SPEC REPOS:
     - MotionInterchange
 
 SPEC CHECKSUMS:
+  KYDrawerController: baad0e63b09c0cb564bd48f0f7f70f45d9176ebc
   MaterialComponents: 49658f0fd7ef6e098e9943fce3f293e700595570
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
 
-PODFILE CHECKSUM: 3447b46b89d8b90cab9c0cf0090c65435b89fd0e
+PODFILE CHECKSUM: 3152d2b50001f88f94be1d47ba918bc8c04875a2
 
 COCOAPODS: 1.10.0

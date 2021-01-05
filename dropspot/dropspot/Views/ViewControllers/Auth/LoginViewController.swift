@@ -88,9 +88,8 @@ class LoginViewController: FormValidatingKeyboardHandlingViewController {
             }
             
             // store user in userdefaults
-            let userData = try? JSONEncoder().encode(jwtResponse.user)
-            UserDefaults.standard.set(userData, forKey: "loggedInUser")
-            
+            UserDefaultsHelper.setLoggedInUser(user: jwtResponse.user!)
+
             // nav to home
             navigateToHome()
             

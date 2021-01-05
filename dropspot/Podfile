@@ -21,14 +21,12 @@ target 'dropspot' do
   pod 'MaterialComponents/Cards'
   pod 'MaterialComponents/Slider'
   pod 'MaterialComponents/Dialogs'
-  pod 'MaterialComponents/NavigationDrawer'
-  pod 'MaterialComponents/NavigationDrawer+Theming'
   pod 'MaterialComponents/Snackbar'
   pod 'MaterialComponents/ActivityIndicator'
   pod 'MaterialComponents/AppBar+Theming'
+  pod 'KYDrawerController'
 
   
-
   target 'dropspotTests' do
     inherit! :search_paths
     # Pods for testing

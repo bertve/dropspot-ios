@@ -123,10 +123,6 @@ class Theme {
         txtf.applyTheme(withScheme: globalContainerSheme())
     }
     
-    static func applyThemeToNavDrawer(_ drawer: MDCBottomDrawerViewController){
-        drawer.applyTheme(withScheme: globalContainerSheme())
-    }
-    
 }
 
     

@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import MaterialComponents
+import KYDrawerController
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,18 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let token = checkIfAlreadyLoggedIn() {
             print(token)
-            let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-            let rootVC = storyBoard.instantiateViewController(withIdentifier: "rootNav")
-            self.window?.rootViewController = rootVC
+            changeRootToHome()
         } else {
             print("not logged in")
-            let storyBoard = UIStoryboard(name: "Auth", bundle: Bundle.main)
-            let loginVC = storyBoard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
-            self.window?.rootViewController = loginVC
+            changeRootToLogin()
         }
         
-        NotificationCenter.default.addObserver(self, selector:#selector(changeRootToHome(notification:)),name:LoginViewController.notificationLoginSuccess,object: nil)
-        
+        NotificationCenter.default.addObserver(self, selector:#selector(notifiedChangeRootToHome(notification:)),name:LoginViewController.notificationLoginSuccess,object: nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(notifiedChangeRootToLogin(notification:)),name:HomeViewController.notificationLogout,object: nil)
+
         self.window?.makeKeyAndVisible()
         
         return true
@@ -39,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func checkIfAlreadyLoggedIn() -> String? {
        let query = [kSecClass as String: kSecClassGenericPassword as String,
                          kSecAttrAccount as String: "token",
-                         kSecReturnData as String: kCFBooleanTrue,
+                         kSecReturnData as String: kCFBooleanTrue ?? "",
                          kSecMatchLimit as String: kSecMatchLimitOne] as [String: Any]
 
             var dataTypeRef: AnyObject?
@@ -53,11 +50,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return nil
     }
     
-    @objc func changeRootToHome(notification: Notification) {
-        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let rootVC = storyBoard.instantiateViewController(withIdentifier: "rootNav")
-        self.window?.rootViewController = rootVC
+    @objc func notifiedChangeRootToHome(notification: Notification) {
+        changeRootToHome()
     }
-
+    
+    @objc func notifiedChangeRootToLogin(notification: Notification) {
+        changeRootToLogin()
+    }
+    
+    private func changeRootToHome(){
+        let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let navContent = storyBoard.instantiateViewController(withIdentifier: "navContent") as! NavDrawerContentViewController
+        let rootVC = storyBoard.instantiateViewController(withIdentifier: "rootNav")
+        let helper = rootVC as! UINavigationController
+        let homeVC = helper.viewControllers.first as! HomeViewController
+        navContent.delegate  = homeVC
+        let drawerController = KYDrawerController(drawerDirection: .left, drawerWidth: 200)
+        drawerController.mainViewController = rootVC
+        drawerController.drawerViewController = navContent
+        self.window?.rootViewController = drawerController
+    }
+    
+    private func changeRootToLogin(){
+        let storyBoard = UIStoryboard(name: "Auth", bundle: Bundle.main)
+        let loginVC = storyBoard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+        self.window?.rootViewController = loginVC
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
 }
 
