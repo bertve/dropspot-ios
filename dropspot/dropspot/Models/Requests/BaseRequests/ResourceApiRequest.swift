@@ -8,6 +8,7 @@
 import Foundation
 
 class ResourceApiRequest<T : Codable>: ApiRequest {
+        
     typealias Response = T
 
     var url: String

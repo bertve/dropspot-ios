@@ -1,13 +1,13 @@
 //
-//  TestViewController.swift
+//  MeViewController.swift
 //  dropspot
 //
-//  Created by Bert Van eeckhoutte on 05/01/2021.
+//  Created by Bert Van eeckhoutte on 06/01/2021.
 //
 
 import UIKit
 
-class TestViewController: UIViewController {
+class MeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

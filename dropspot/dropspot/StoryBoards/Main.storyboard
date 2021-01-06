@@ -44,7 +44,6 @@
                     </navigationItem>
                     <connections>
                         <segue destination="psa-mg-fd9" kind="show" identifier="toSpots" id="hOW-hz-Syc"/>
-                        <segue destination="GJJ-Jm-iJI" kind="show" identifier="test" id="cyl-Tf-hAI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qEk-aZ-haD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -186,42 +185,14 @@
             </objects>
             <point key="canvasLocation" x="-1772" y="672"/>
         </scene>
-        <!--Test View Controller-->
-        <scene sceneID="GQD-nI-vou">
-            <objects>
-                <viewController id="GJJ-Jm-iJI" customClass="TestViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5VK-MX-oEr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TEEEEEEEST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIK-vX-fvv">
-                                <rect key="frame" x="157.5" y="438" width="99" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="yEs-dr-A9z"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="HIK-vX-fvv" firstAttribute="centerY" secondItem="5VK-MX-oEr" secondAttribute="centerY" id="gKW-IA-gT1"/>
-                            <constraint firstItem="HIK-vX-fvv" firstAttribute="centerX" secondItem="5VK-MX-oEr" secondAttribute="centerX" id="h0A-Pj-zAC"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="tuZ-WT-d2C"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Shz-Lb-nqu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3155" y="1458"/>
-        </scene>
         <!--Spots-->
         <scene sceneID="eSj-Qa-POe">
             <objects>
-                <collectionViewController id="psa-mg-fd9" sceneMemberID="viewController">
+                <collectionViewController id="psa-mg-fd9" customClass="SpotsCollectionViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="cOE-RM-9Au">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gsf-qZ-cOq">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -229,13 +200,29 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="lv3-Ba-JHx">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="spotCell" id="lv3-Ba-JHx" customClass="SpotCellViewControllerCollectionViewCell" customModule="dropspot" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eIb-YR-hzY">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEb-7V-C24">
+                                            <rect key="frame" x="64" y="64" width="0.0" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="hEb-7V-C24" firstAttribute="centerY" secondItem="eIb-YR-hzY" secondAttribute="centerY" id="Qaz-QC-Tr9"/>
+                                        <constraint firstItem="hEb-7V-C24" firstAttribute="centerX" secondItem="eIb-YR-hzY" secondAttribute="centerX" id="XDw-hN-HXY"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <color key="backgroundColor" name="PrimaryColor"/>
+                                <connections>
+                                    <outlet property="lbl" destination="hEb-7V-C24" id="CKf-5J-zU8"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -247,7 +234,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EsW-OG-AKP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2307" y="1458"/>
+            <point key="canvasLocation" x="-3129" y="1412"/>
         </scene>
     </scenes>
     <resources>
@@ -262,9 +249,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

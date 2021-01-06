@@ -18,10 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         if let token = checkIfAlreadyLoggedIn() {
-            print(token)
-            changeRootToHome()
+            changeRootToHome(token: token)
         } else {
-            print("not logged in")
             changeRootToLogin()
         }
         
@@ -51,14 +49,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     @objc func notifiedChangeRootToHome(notification: Notification) {
-        changeRootToHome()
+        let token = notification.object as! String
+        changeRootToHome(token: token)
     }
     
     @objc func notifiedChangeRootToLogin(notification: Notification) {
         changeRootToLogin()
     }
     
-    private func changeRootToHome(){
+    private func changeRootToHome(token: String){
+        Session.sessionToken = token
+
         let storyBoard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let navContent = storyBoard.instantiateViewController(withIdentifier: "navContent") as! NavDrawerContentViewController
         let rootVC = storyBoard.instantiateViewController(withIdentifier: "rootNav")

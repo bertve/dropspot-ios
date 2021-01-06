@@ -91,15 +91,15 @@ class LoginViewController: FormValidatingKeyboardHandlingViewController {
             UserDefaultsHelper.setLoggedInUser(user: jwtResponse.user!)
 
             // nav to home
-            navigateToHome()
+            navigateToHome(token: jwtResponse.token)
             
         }else {
             showSnackBar(message: "Login Failed: " + jwtResponse.message)
         }
     }
     
-    private func navigateToHome(){
-        NotificationCenter.default.post(name: LoginViewController.notificationLoginSuccess, object: nil)
+    private func navigateToHome(token: String){
+        NotificationCenter.default.post(name: LoginViewController.notificationLoginSuccess, object: token)
     }
     
     private func handleLoginFailure(_ error: Error){

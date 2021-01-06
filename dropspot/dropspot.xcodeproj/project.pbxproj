@@ -14,6 +14,10 @@
 		152063C625A12D3300BAD678 /* RegisterRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152063C525A12D3300BAD678 /* RegisterRequest.swift */; };
 		152063CB25A136E300BAD678 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152063CA25A136E300BAD678 /* UIViewControllerExt.swift */; };
 		152063D025A13CCF00BAD678 /* StringExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 152063CF25A13CCF00BAD678 /* StringExt.swift */; };
+		1527AEC625A53AB50020CB36 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1527AEC525A53AB50020CB36 /* Session.swift */; };
+		1527AED325A543530020CB36 /* MeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1527AED225A543530020CB36 /* MeViewController.swift */; };
+		1527AEE325A546150020CB36 /* SpotsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1527AEE225A546150020CB36 /* SpotsCollectionViewController.swift */; };
+		1527AEE925A546DA0020CB36 /* SpotCellViewControllerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1527AEE825A546DA0020CB36 /* SpotCellViewControllerCollectionViewCell.swift */; };
 		1532722725A367B0004D4E76 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1532722625A367B0004D4E76 /* MapViewController.swift */; };
 		15768AA42598F05000409E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15768AA32598F05000409E2B /* AppDelegate.swift */; };
 		15768AA82598F05000409E2B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15768AA72598F05000409E2B /* LoginViewController.swift */; };
@@ -26,7 +30,6 @@
 		1595248625A2634F00EA7D2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1595248525A2634F00EA7D2A /* Main.storyboard */; };
 		1595249625A2731900EA7D2A /* NavDrawerContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1595249525A2731900EA7D2A /* NavDrawerContentViewController.swift */; };
 		159EAABF25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159EAABE25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift */; };
-		159EAAC725A4CE0900EF8B1A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159EAAC625A4CE0900EF8B1A /* TestViewController.swift */; };
 		15C946C2259A8CFA00D970E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946C1259A8CFA00D970E9 /* RegisterViewController.swift */; };
 		15C946CF259AA2BA00D970E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946CE259AA2BA00D970E9 /* HomeViewController.swift */; };
 		15C946D5259AA66C00D970E9 /* LoginFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946D4259AA66C00D970E9 /* LoginFormValidator.swift */; };
@@ -82,6 +85,10 @@
 		152063C525A12D3300BAD678 /* RegisterRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRequest.swift; sourceTree = "<group>"; };
 		152063CA25A136E300BAD678 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		152063CF25A13CCF00BAD678 /* StringExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExt.swift; sourceTree = "<group>"; };
+		1527AEC525A53AB50020CB36 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		1527AED225A543530020CB36 /* MeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeViewController.swift; sourceTree = "<group>"; };
+		1527AEE225A546150020CB36 /* SpotsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpotsCollectionViewController.swift; path = "../../../../../../../learning swift app dev/myProjects/spotWebTest/spotWebTest/ViewControllers/SpotsCollectionViewController.swift"; sourceTree = "<group>"; };
+		1527AEE825A546DA0020CB36 /* SpotCellViewControllerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpotCellViewControllerCollectionViewCell.swift; path = "../../../../../../learning swift app dev/myProjects/spotWebTest/spotWebTest/cells/SpotCellViewControllerCollectionViewCell.swift"; sourceTree = "<group>"; };
 		1532722625A367B0004D4E76 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		15768AA02598F05000409E2B /* dropspot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dropspot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15768AA32598F05000409E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +107,6 @@
 		1595248525A2634F00EA7D2A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1595249525A2731900EA7D2A /* NavDrawerContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavDrawerContentViewController.swift; sourceTree = "<group>"; };
 		159EAABE25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavDrawerNavigationDelegate.swift; sourceTree = "<group>"; };
-		159EAAC625A4CE0900EF8B1A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		15C946C1259A8CFA00D970E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		15C946CE259AA2BA00D970E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		15C946D4259AA66C00D970E9 /* LoginFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormValidator.swift; sourceTree = "<group>"; };
@@ -168,7 +174,6 @@
 		150FF5A225990B3F0027719B /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				15C94744259D5B0700D970E9 /* Requests */,
 				15C94735259D5A4000D970E9 /* SpotService.swift */,
 				15C94730259D5A3300D970E9 /* ResourceService.swift */,
 				15C946E1259AAF2800D970E9 /* AuthService.swift */,
@@ -179,6 +184,7 @@
 		150FF5A7259913CB0027719B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				15C94744259D5B0700D970E9 /* Requests */,
 				1510667D25A51B2E00939D36 /* Helpers */,
 				159EAABD25A4B96B00EF8B1A /* Delegates */,
 				15C946D3259AA65800D970E9 /* FormValidators */,
@@ -212,6 +218,7 @@
 		150FF5AA259913FF0027719B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1527AEE725A546AE0020CB36 /* CustomCells */,
 				150FF5A8259913E10027719B /* ViewControllers */,
 				150FF5A9259913F50027719B /* ViewComponents */,
 			);
@@ -222,8 +229,17 @@
 			isa = PBXGroup;
 			children = (
 				1510667E25A51B6000939D36 /* UserDefaultsHelper.swift */,
+				1527AEC525A53AB50020CB36 /* Session.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1527AEE725A546AE0020CB36 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				1527AEE825A546DA0020CB36 /* SpotCellViewControllerCollectionViewCell.swift */,
+			);
+			path = CustomCells;
 			sourceTree = "<group>";
 		};
 		15768A972598F05000409E2B = {
@@ -312,10 +328,11 @@
 		1595247C25A25BB900EA7D2A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1527AEE225A546150020CB36 /* SpotsCollectionViewController.swift */,
 				1595249525A2731900EA7D2A /* NavDrawerContentViewController.swift */,
 				15C946CE259AA2BA00D970E9 /* HomeViewController.swift */,
 				1532722625A367B0004D4E76 /* MapViewController.swift */,
-				159EAAC625A4CE0900EF8B1A /* TestViewController.swift */,
+				1527AED225A543530020CB36 /* MeViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -654,6 +671,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1527AED325A543530020CB36 /* MeViewController.swift in Sources */,
+				1527AEE325A546150020CB36 /* SpotsCollectionViewController.swift in Sources */,
 				15C94779259D63FB00D970E9 /* AppUser.swift in Sources */,
 				15C946EF259B9B9300D970E9 /* FormValidator.swift in Sources */,
 				15C9476F259D600C00D970E9 /* LoginRequestModel.swift in Sources */,
@@ -674,7 +693,7 @@
 				15C94767259D5FE600D970E9 /* JwtResponse.swift in Sources */,
 				15C947A9259E280100D970E9 /* ResourceApiRequest.swift in Sources */,
 				15C946E2259AAF2800D970E9 /* AuthService.swift in Sources */,
-				159EAAC725A4CE0900EF8B1A /* TestViewController.swift in Sources */,
+				1527AEC625A53AB50020CB36 /* Session.swift in Sources */,
 				1595249625A2731900EA7D2A /* NavDrawerContentViewController.swift in Sources */,
 				15C94774259D631500D970E9 /* MessageResponse.swift in Sources */,
 				1591E95425994B2600EEA918 /* Theme.swift in Sources */,
@@ -687,6 +706,7 @@
 				15C94718259BDD9300D970E9 /* KeyboardHandlingViewController.swift in Sources */,
 				15C94702259BB9B900D970E9 /* TextFieldExt.swift in Sources */,
 				15C946CF259AA2BA00D970E9 /* HomeViewController.swift in Sources */,
+				1527AEE925A546DA0020CB36 /* SpotCellViewControllerCollectionViewCell.swift in Sources */,
 				15C946F4259BA49400D970E9 /* FormValidationUtil.swift in Sources */,
 				15C9477E259E1AD700D970E9 /* LoginRequest.swift in Sources */,
 				15C94789259E25A600D970E9 /* PostRequestModelBasedResourceApiRequest.swift in Sources */,
