@@ -36,7 +36,6 @@ class HomeViewController: UIViewController, NavDrawerNavigationDelegate{
 
     //MARK: NavDrawerNavigationDelegate
     func meNavItemWasClicked() {
-        performSegue(withIdentifier: "test", sender: self)
         closeDrawer()
     }
     

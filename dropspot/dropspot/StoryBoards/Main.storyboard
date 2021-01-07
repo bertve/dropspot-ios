@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="-2687" y="656"/>
         </scene>
-        <!--App Bar Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="7D2-jc-hkG">
             <objects>
-                <navigationController storyboardIdentifier="rootNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9SU-YV-7tl" customClass="MDCAppBarNavigationController" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="rootNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9SU-YV-7tl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="ic_arrow_back" id="1ug-sA-y1l">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -90,7 +90,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KS0-fC-qc2" userLabel="profile container">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="238"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="1" ambiguous="YES" image="skater_profile" translatesAutoresizingMaskIntoConstraints="NO" id="ycv-rF-OZY">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="1" ambiguous="YES" image="skaterProfile" translatesAutoresizingMaskIntoConstraints="NO" id="ycv-rF-OZY">
                                                 <rect key="frame" x="16" y="16" width="382" height="180.5"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" ambiguous="YES" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hY-9b-MwV">
@@ -177,13 +177,27 @@
                     <view key="view" contentMode="scaleToFill" id="WOF-jL-LMc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lUh-yV-Wya">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="C5Z-GS-Xr7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lUh-yV-Wya" firstAttribute="top" secondItem="WOF-jL-LMc" secondAttribute="top" id="Xkr-d4-ALH"/>
+                            <constraint firstItem="lUh-yV-Wya" firstAttribute="bottom" secondItem="WOF-jL-LMc" secondAttribute="bottom" id="dFC-CL-zdh"/>
+                            <constraint firstItem="lUh-yV-Wya" firstAttribute="leading" secondItem="C5Z-GS-Xr7" secondAttribute="leading" id="muC-C8-aO7"/>
+                            <constraint firstItem="lUh-yV-Wya" firstAttribute="trailing" secondItem="WOF-jL-LMc" secondAttribute="trailing" id="uEU-Vg-kaG"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="lUh-yV-Wya" id="zMd-D8-ck3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zk5-7e-7an" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1772" y="672"/>
+            <point key="canvasLocation" x="-1772.4637681159422" y="671.65178571428567"/>
         </scene>
         <!--Spots-->
         <scene sceneID="eSj-Qa-POe">
@@ -243,7 +257,7 @@
         <image name="mappin.and.ellipse" catalog="system" width="118" height="128"/>
         <image name="menu-white" width="24" height="24"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="skater_profile" width="512" height="512"/>
+        <image name="skaterProfile" width="512" height="512"/>
         <namedColor name="PrimaryColor">
             <color red="0.15294117647058825" green="0.20784313725490197" blue="0.23921568627450981" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

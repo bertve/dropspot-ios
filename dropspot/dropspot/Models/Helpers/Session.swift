@@ -12,7 +12,6 @@ class Session {
     static var defaultSession : URLSession{
         let config = URLSessionConfiguration.default
         if let formattedToken = Session.formattedSessionToken {
-            print("setting auth header")
             config.httpAdditionalHeaders = [Session.authHeader : formattedToken]
         }
         return URLSession(configuration: config)

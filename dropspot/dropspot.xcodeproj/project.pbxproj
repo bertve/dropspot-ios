@@ -27,6 +27,11 @@
 		15768ABB2598F05100409E2B /* dropspotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15768ABA2598F05100409E2B /* dropspotTests.swift */; };
 		15768AC62598F05100409E2B /* dropspotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15768AC52598F05100409E2B /* dropspotUITests.swift */; };
 		1591E95425994B2600EEA918 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1591E95325994B2600EEA918 /* Theme.swift */; };
+		15932F6325A63B3500997199 /* SpotRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15932F6225A63B3500997199 /* SpotRepository.swift */; };
+		15932F7325A652EB00997199 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15932F7225A652EB00997199 /* ResponseError.swift */; };
+		15932F7825A6708100997199 /* FileManagerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15932F7725A6708100997199 /* FileManagerExt.swift */; };
+		15932F7E25A67EB700997199 /* SpotMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15932F7D25A67EB700997199 /* SpotMarker.swift */; };
+		15932F8325A696C000997199 /* SpotMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15932F8225A696C000997199 /* SpotMarkerView.swift */; };
 		1595248625A2634F00EA7D2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1595248525A2634F00EA7D2A /* Main.storyboard */; };
 		1595249625A2731900EA7D2A /* NavDrawerContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1595249525A2731900EA7D2A /* NavDrawerContentViewController.swift */; };
 		159EAABF25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159EAABE25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift */; };
@@ -52,7 +57,6 @@
 		15C94779259D63FB00D970E9 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C94778259D63FB00D970E9 /* AppUser.swift */; };
 		15C9477E259E1AD700D970E9 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9477D259E1AD700D970E9 /* LoginRequest.swift */; };
 		15C94789259E25A600D970E9 /* PostRequestModelBasedResourceApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C94788259E25A600D970E9 /* PostRequestModelBasedResourceApiRequest.swift */; };
-		15C947A0259E276F00D970E9 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9479F259E276F00D970E9 /* ResponseError.swift */; };
 		15C947A7259E280100D970E9 /* ApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9478E259E272000D970E9 /* ApiRequest.swift */; };
 		15C947A8259E280100D970E9 /* BasedResourceApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9478F259E272700D970E9 /* BasedResourceApiRequest.swift */; };
 		15C947A9259E280100D970E9 /* ResourceApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9479B259E275200D970E9 /* ResourceApiRequest.swift */; };
@@ -104,6 +108,11 @@
 		15768AC52598F05100409E2B /* dropspotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropspotUITests.swift; sourceTree = "<group>"; };
 		15768AC72598F05100409E2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1591E95325994B2600EEA918 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		15932F6225A63B3500997199 /* SpotRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotRepository.swift; sourceTree = "<group>"; };
+		15932F7225A652EB00997199 /* ResponseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResponseError.swift; path = ../../../../../../../../.Trash/ResponseError.swift; sourceTree = "<group>"; };
+		15932F7725A6708100997199 /* FileManagerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExt.swift; sourceTree = "<group>"; };
+		15932F7D25A67EB700997199 /* SpotMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotMarker.swift; sourceTree = "<group>"; };
+		15932F8225A696C000997199 /* SpotMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotMarkerView.swift; sourceTree = "<group>"; };
 		1595248525A2634F00EA7D2A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1595249525A2731900EA7D2A /* NavDrawerContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavDrawerContentViewController.swift; sourceTree = "<group>"; };
 		159EAABE25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavDrawerNavigationDelegate.swift; sourceTree = "<group>"; };
@@ -132,7 +141,6 @@
 		15C9478E259E272000D970E9 /* ApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequest.swift; sourceTree = "<group>"; };
 		15C9478F259E272700D970E9 /* BasedResourceApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasedResourceApiRequest.swift; sourceTree = "<group>"; };
 		15C9479B259E275200D970E9 /* ResourceApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceApiRequest.swift; sourceTree = "<group>"; };
-		15C9479F259E276F00D970E9 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		15C947B0259E382800D970E9 /* RequestModelBasedResourceApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModelBasedResourceApiRequest.swift; sourceTree = "<group>"; };
 		291B7393A846C8E1185627D8 /* Pods-dropspot-dropspotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dropspot-dropspotUITests.release.xcconfig"; path = "Target Support Files/Pods-dropspot-dropspotUITests/Pods-dropspot-dropspotUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2C8218B93C130914FF9F8D04 /* Pods_dropspot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dropspot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +192,7 @@
 		150FF5A7259913CB0027719B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				15932F6125A63B0100997199 /* Repositories */,
 				15C94744259D5B0700D970E9 /* Requests */,
 				1510667D25A51B2E00939D36 /* Helpers */,
 				159EAABD25A4B96B00EF8B1A /* Delegates */,
@@ -193,6 +202,7 @@
 				15C9473A259D5A6300D970E9 /* Spot.swift */,
 				15C9473F259D5A6800D970E9 /* SpotDetail.swift */,
 				15C94778259D63FB00D970E9 /* AppUser.swift */,
+				15932F7D25A67EB700997199 /* SpotMarker.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,20 +217,12 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		150FF5A9259913F50027719B /* ViewComponents */ = {
-			isa = PBXGroup;
-			children = (
-				1591E95325994B2600EEA918 /* Theme.swift */,
-			);
-			path = ViewComponents;
-			sourceTree = "<group>";
-		};
 		150FF5AA259913FF0027719B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1527AEE725A546AE0020CB36 /* CustomCells */,
+				1591E95325994B2600EEA918 /* Theme.swift */,
+				1527AEE725A546AE0020CB36 /* CustomViews */,
 				150FF5A8259913E10027719B /* ViewControllers */,
-				150FF5A9259913F50027719B /* ViewComponents */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,12 +236,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		1527AEE725A546AE0020CB36 /* CustomCells */ = {
+		1527AEE725A546AE0020CB36 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
 				1527AEE825A546DA0020CB36 /* SpotCellViewControllerCollectionViewCell.swift */,
+				15932F8225A696C000997199 /* SpotMarkerView.swift */,
 			);
-			path = CustomCells;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		15768A972598F05000409E2B = {
@@ -295,6 +298,14 @@
 				15768AC72598F05100409E2B /* Info.plist */,
 			);
 			path = dropspotUITests;
+			sourceTree = "<group>";
+		};
+		15932F6125A63B0100997199 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				15932F6225A63B3500997199 /* SpotRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		1595247625A25A8300EA7D2A /* StoryBoards */ = {
@@ -363,6 +374,7 @@
 				15C94701259BB9B900D970E9 /* TextFieldExt.swift */,
 				152063CA25A136E300BAD678 /* UIViewControllerExt.swift */,
 				152063CF25A13CCF00BAD678 /* StringExt.swift */,
+				15932F7725A6708100997199 /* FileManagerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -399,10 +411,10 @@
 		15C947B8259E459500D970E9 /* BaseRequests */ = {
 			isa = PBXGroup;
 			children = (
-				15C9479F259E276F00D970E9 /* ResponseError.swift */,
 				15C94788259E25A600D970E9 /* PostRequestModelBasedResourceApiRequest.swift */,
 				15C9479B259E275200D970E9 /* ResourceApiRequest.swift */,
 				15C9478F259E272700D970E9 /* BasedResourceApiRequest.swift */,
+				15932F7225A652EB00997199 /* ResponseError.swift */,
 				15C9478E259E272000D970E9 /* ApiRequest.swift */,
 				15C947B0259E382800D970E9 /* RequestModelBasedResourceApiRequest.swift */,
 			);
@@ -685,11 +697,13 @@
 				15C94750259D5B2D00D970E9 /* SpotsRequest.swift in Sources */,
 				159EAABF25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift in Sources */,
 				15C9472C259CD5AF00D970E9 /* FormValidatingKeyboardHandlingViewController.swift in Sources */,
+				15932F6325A63B3500997199 /* SpotRepository.swift in Sources */,
 				152063CB25A136E300BAD678 /* UIViewControllerExt.swift in Sources */,
 				15C946D5259AA66C00D970E9 /* LoginFormValidator.swift in Sources */,
 				15C94740259D5A6800D970E9 /* SpotDetail.swift in Sources */,
 				15C946C2259A8CFA00D970E9 /* RegisterViewController.swift in Sources */,
 				15C9473B259D5A6300D970E9 /* Spot.swift in Sources */,
+				15932F8325A696C000997199 /* SpotMarkerView.swift in Sources */,
 				15C94767259D5FE600D970E9 /* JwtResponse.swift in Sources */,
 				15C947A9259E280100D970E9 /* ResourceApiRequest.swift in Sources */,
 				15C946E2259AAF2800D970E9 /* AuthService.swift in Sources */,
@@ -708,11 +722,13 @@
 				15C946CF259AA2BA00D970E9 /* HomeViewController.swift in Sources */,
 				1527AEE925A546DA0020CB36 /* SpotCellViewControllerCollectionViewCell.swift in Sources */,
 				15C946F4259BA49400D970E9 /* FormValidationUtil.swift in Sources */,
+				15932F7325A652EB00997199 /* ResponseError.swift in Sources */,
+				15932F7825A6708100997199 /* FileManagerExt.swift in Sources */,
 				15C9477E259E1AD700D970E9 /* LoginRequest.swift in Sources */,
 				15C94789259E25A600D970E9 /* PostRequestModelBasedResourceApiRequest.swift in Sources */,
 				15C94731259D5A3300D970E9 /* ResourceService.swift in Sources */,
 				15C947A7259E280100D970E9 /* ApiRequest.swift in Sources */,
-				15C947A0259E276F00D970E9 /* ResponseError.swift in Sources */,
+				15932F7E25A67EB700997199 /* SpotMarker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,8 +6,7 @@ target 'dropspot' do
   use_frameworks!
 
   # Pods for dropspot
-  pod 'MaterialComponents/schemes/Color'
-  pod 'MaterialComponents/AppBar'
+  pod 'MaterialComponents/schemes'
   pod 'MaterialComponents/Buttons'
   pod 'MaterialComponents/Buttons+Theming'
   pod 'MaterialComponents/TextControls+FilledTextAreas'
@@ -23,7 +22,6 @@ target 'dropspot' do
   pod 'MaterialComponents/Dialogs'
   pod 'MaterialComponents/Snackbar'
   pod 'MaterialComponents/ActivityIndicator'
-  pod 'MaterialComponents/AppBar+Theming'
   pod 'KYDrawerController'
 
   

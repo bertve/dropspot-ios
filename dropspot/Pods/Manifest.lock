@@ -6,25 +6,7 @@ PODS:
     - MDFInternationalization
     - MotionAnimator (~> 2.0)
   - MaterialComponents/AnimationTiming (119.3.0)
-  - MaterialComponents/AppBar (119.3.0):
-    - MaterialComponents/FlexibleHeader
-    - MaterialComponents/HeaderStackView
-    - MaterialComponents/NavigationBar
-    - MaterialComponents/private/Application
-    - MaterialComponents/private/Icons/ic_arrow_back
-    - MaterialComponents/private/UIMetrics
-    - MaterialComponents/ShadowElevations
-    - MaterialComponents/ShadowLayer
-    - MaterialComponents/Typography
-    - MDFInternationalization
-  - "MaterialComponents/AppBar+Theming (119.3.0)":
-    - MaterialComponents/AppBar
-    - MaterialComponents/schemes/Container
   - MaterialComponents/Availability (119.3.0)
-  - MaterialComponents/ButtonBar (119.3.0):
-    - MaterialComponents/Buttons
-    - MaterialComponents/private/Application
-    - MDFInternationalization
   - MaterialComponents/Buttons (119.3.0):
     - MaterialComponents/Elevation
     - MaterialComponents/Ink
@@ -74,32 +56,10 @@ PODS:
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/FlexibleHeader (119.3.0):
-    - MaterialComponents/Availability
-    - MaterialComponents/Elevation
-    - "MaterialComponents/FlexibleHeader+ShiftBehavior"
-    - "MaterialComponents/FlexibleHeader+ShiftBehaviorEnabledWithStatusBar"
-    - MaterialComponents/private/Application
-    - MaterialComponents/private/Math
-    - MaterialComponents/private/UIMetrics
-    - MaterialComponents/ShadowElevations
-    - MaterialComponents/ShadowLayer
-    - MDFTextAccessibility
-  - "MaterialComponents/FlexibleHeader+ShiftBehavior (119.3.0)"
-  - "MaterialComponents/FlexibleHeader+ShiftBehaviorEnabledWithStatusBar (119.3.0)":
-    - "MaterialComponents/FlexibleHeader+ShiftBehavior"
-  - MaterialComponents/HeaderStackView (119.3.0)
   - MaterialComponents/Ink (119.3.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
-  - MaterialComponents/NavigationBar (119.3.0):
-    - MaterialComponents/ButtonBar
-    - MaterialComponents/Elevation
-    - MaterialComponents/private/Math
-    - MaterialComponents/Typography
-    - MDFInternationalization
-    - MDFTextAccessibility
   - MaterialComponents/OverlayWindow (119.3.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Application
@@ -108,8 +68,6 @@ PODS:
   - MaterialComponents/private/Color (119.3.0):
     - MaterialComponents/Availability
   - MaterialComponents/private/Icons/Base (119.3.0)
-  - MaterialComponents/private/Icons/ic_arrow_back (119.3.0):
-    - MaterialComponents/private/Icons/Base
   - MaterialComponents/private/Icons/ic_check_circle (119.3.0):
     - MaterialComponents/private/Icons/Base
   - MaterialComponents/private/KeyboardWatcher (119.3.0):
@@ -153,13 +111,18 @@ PODS:
     - MaterialComponents/ShapeLibrary
     - MaterialComponents/Typography
     - MDFInternationalization
-  - MaterialComponents/private/UIMetrics (119.3.0):
-    - MaterialComponents/private/Application
   - MaterialComponents/Ripple (119.3.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
+  - MaterialComponents/schemes (119.3.0):
+    - MaterialComponents/schemes/Color (= 119.3.0)
+    - MaterialComponents/schemes/Container (= 119.3.0)
+    - MaterialComponents/schemes/Shape (= 119.3.0)
+    - MaterialComponents/schemes/Typography (= 119.3.0)
+    - "MaterialComponents/schemes/Typography+BasicFontScheme (= 119.3.0)"
+    - "MaterialComponents/schemes/Typography+Scheming (= 119.3.0)"
   - MaterialComponents/schemes/Color (119.3.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
@@ -256,13 +219,11 @@ PODS:
 DEPENDENCIES:
   - KYDrawerController
   - MaterialComponents/ActivityIndicator
-  - MaterialComponents/AppBar
-  - "MaterialComponents/AppBar+Theming"
   - MaterialComponents/Buttons
   - "MaterialComponents/Buttons+Theming"
   - MaterialComponents/Cards
   - MaterialComponents/Dialogs
-  - MaterialComponents/schemes/Color
+  - MaterialComponents/schemes
   - MaterialComponents/Slider
   - MaterialComponents/Snackbar
   - "MaterialComponents/TextControls+FilledTextAreas"
@@ -291,6 +252,6 @@ SPEC CHECKSUMS:
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
 
-PODFILE CHECKSUM: 3152d2b50001f88f94be1d47ba918bc8c04875a2
+PODFILE CHECKSUM: ef777c2adb274942c46148805b185740bb1599e4
 
 COCOAPODS: 1.10.0
