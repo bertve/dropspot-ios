@@ -7,18 +7,22 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
     @IBOutlet private var mapView: MKMapView!
 
     private let spotRepository = SpotRepository()
     private var markers = [SpotMarker]()
-
+    private var locationManager: CLLocationManager!
+    private var currentLocationMarker: CurrentLocationMarker? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
         mapView.register(SpotMarkerView.self, forAnnotationViewWithReuseIdentifier: SpotMarkerView.identifier)
+        mapView.register(CurrentLocationMarkerView.self, forAnnotationViewWithReuseIdentifier: CurrentLocationMarkerView.identifier)
         
         spotRepository.fetchSpots(completion: { res in
             switch (res){
@@ -28,6 +32,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                 self.handleFailure(error: error)
             }
         })
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        determineCurrentLocation()
     }
     
     private func updateMap(with spots: [Spot]){
@@ -44,11 +53,20 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
 
+    // loading custom markers
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        guard let annotation = annotation as? SpotMarker else {
+        
+        switch (annotation) {
+        case let spotMarker as SpotMarker:
+            return handleDequeuingSpotMarker(annotation: spotMarker)
+        case let currentLocaionMarker as CurrentLocationMarker:
+            return handleDequeuingCurrentLocationMarker(annotation: currentLocaionMarker)
+        default:
             return nil
         }
-        
+    }
+    
+    private func handleDequeuingSpotMarker(annotation: SpotMarker) -> SpotMarkerView {
         var view : SpotMarkerView
         if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: SpotMarkerView.identifier) as? SpotMarkerView {
             dequeuedView.annotation = annotation
@@ -60,6 +78,19 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         return view
     }
     
+    private func handleDequeuingCurrentLocationMarker(annotation: CurrentLocationMarker) -> CurrentLocationMarkerView{
+        var view : CurrentLocationMarkerView
+        if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: CurrentLocationMarkerView.identifier) as? CurrentLocationMarkerView {
+            dequeuedView.annotation = annotation
+            view = dequeuedView
+        } else {
+            view = CurrentLocationMarkerView(annotation: annotation, reuseIdentifier: CurrentLocationMarkerView.identifier)
+        }
+        
+        return view
+    }
+    
+    // navigate to selected spot
     func mapView(
       _ mapView: MKMapView,
       annotationView view: MKAnnotationView,
@@ -73,6 +104,41 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking
       ]
         marker.mapItem?.openInMaps(launchOptions: launchOptions)
+    }
+    
+    //current loc
+    //MARK:- CLLocationManagerDelegate Methods
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        // get current location
+        let mUserLocation:CLLocation = locations[0] as CLLocation
+
+        // draw current location if not same loc
+        if let marker = currentLocationMarker {
+            mapView.removeAnnotation(marker)
+        } else {
+            // init center current location
+            mapView.centerMapwithLocation(mUserLocation, radius: 1000)
+        }
+        
+        currentLocationMarker = CurrentLocationMarker(coordinate: mUserLocation.coordinate)
+        mapView.addAnnotation(currentLocationMarker!)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error - locationManager: \(error.localizedDescription)")
+    }
+    //MARK:- Intance Methods
+
+    func determineCurrentLocation() {
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
     }
 
 }

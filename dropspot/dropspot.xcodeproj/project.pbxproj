@@ -61,6 +61,8 @@
 		15C947A8259E280100D970E9 /* BasedResourceApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9478F259E272700D970E9 /* BasedResourceApiRequest.swift */; };
 		15C947A9259E280100D970E9 /* ResourceApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C9479B259E275200D970E9 /* ResourceApiRequest.swift */; };
 		15C947B1259E382800D970E9 /* RequestModelBasedResourceApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C947B0259E382800D970E9 /* RequestModelBasedResourceApiRequest.swift */; };
+		15D30D3925A7684A00A90B28 /* CurrentLocationMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D30D3825A7684A00A90B28 /* CurrentLocationMarkerView.swift */; };
+		15D30D3E25A768BD00A90B28 /* CurrentLocationMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D30D3D25A768BD00A90B28 /* CurrentLocationMarker.swift */; };
 		353A3ADEAF442369B01931F5 /* Pods_dropspot_dropspotUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E239E1BFA4C2EDE969960B3 /* Pods_dropspot_dropspotUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +144,8 @@
 		15C9478F259E272700D970E9 /* BasedResourceApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasedResourceApiRequest.swift; sourceTree = "<group>"; };
 		15C9479B259E275200D970E9 /* ResourceApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceApiRequest.swift; sourceTree = "<group>"; };
 		15C947B0259E382800D970E9 /* RequestModelBasedResourceApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModelBasedResourceApiRequest.swift; sourceTree = "<group>"; };
+		15D30D3825A7684A00A90B28 /* CurrentLocationMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationMarkerView.swift; sourceTree = "<group>"; };
+		15D30D3D25A768BD00A90B28 /* CurrentLocationMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationMarker.swift; sourceTree = "<group>"; };
 		291B7393A846C8E1185627D8 /* Pods-dropspot-dropspotUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dropspot-dropspotUITests.release.xcconfig"; path = "Target Support Files/Pods-dropspot-dropspotUITests/Pods-dropspot-dropspotUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2C8218B93C130914FF9F8D04 /* Pods_dropspot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dropspot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E239E1BFA4C2EDE969960B3 /* Pods_dropspot_dropspotUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dropspot_dropspotUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +207,7 @@
 				15C9473F259D5A6800D970E9 /* SpotDetail.swift */,
 				15C94778259D63FB00D970E9 /* AppUser.swift */,
 				15932F7D25A67EB700997199 /* SpotMarker.swift */,
+				15D30D3D25A768BD00A90B28 /* CurrentLocationMarker.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 			children = (
 				1527AEE825A546DA0020CB36 /* SpotCellViewControllerCollectionViewCell.swift */,
 				15932F8225A696C000997199 /* SpotMarkerView.swift */,
+				15D30D3825A7684A00A90B28 /* CurrentLocationMarkerView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -687,6 +693,7 @@
 				1527AEE325A546150020CB36 /* SpotsCollectionViewController.swift in Sources */,
 				15C94779259D63FB00D970E9 /* AppUser.swift in Sources */,
 				15C946EF259B9B9300D970E9 /* FormValidator.swift in Sources */,
+				15D30D3E25A768BD00A90B28 /* CurrentLocationMarker.swift in Sources */,
 				15C9476F259D600C00D970E9 /* LoginRequestModel.swift in Sources */,
 				15768AA82598F05000409E2B /* LoginViewController.swift in Sources */,
 				15C9471E259BF78C00D970E9 /* RegisterFormValidator.swift in Sources */,
@@ -698,6 +705,7 @@
 				159EAABF25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift in Sources */,
 				15C9472C259CD5AF00D970E9 /* FormValidatingKeyboardHandlingViewController.swift in Sources */,
 				15932F6325A63B3500997199 /* SpotRepository.swift in Sources */,
+				15D30D3925A7684A00A90B28 /* CurrentLocationMarkerView.swift in Sources */,
 				152063CB25A136E300BAD678 /* UIViewControllerExt.swift in Sources */,
 				15C946D5259AA66C00D970E9 /* LoginFormValidator.swift in Sources */,
 				15C94740259D5A6800D970E9 /* SpotDetail.swift in Sources */,

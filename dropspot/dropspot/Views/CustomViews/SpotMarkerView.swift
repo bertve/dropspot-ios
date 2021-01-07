@@ -26,9 +26,10 @@ class SpotMarkerView: MKMarkerAnnotationView {
             rightCalloutAccessoryView = mapsButton
             clusteringIdentifier = SpotMarkerView.identifier
 
-            markerTintColor = Theme.globalColorSheme().primaryColor
+            markerTintColor = Theme.globalColorSheme().secondaryColor
             let imageMarker =  UIImage(named: "spotMarker")
             glyphImage = imageMarker
+            glyphTintColor = Theme.globalColorSheme().primaryColor
         }
     }
 }
