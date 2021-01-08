@@ -15,5 +15,4 @@ class CurrentLocationMarker: NSObject, MKAnnotation {
         self.coordinate = coordinate
         super.init()
     }
-    
 }

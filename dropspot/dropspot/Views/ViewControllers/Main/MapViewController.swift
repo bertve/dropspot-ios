@@ -8,10 +8,13 @@
 import UIKit
 import MapKit
 import CoreLocation
+import MaterialComponents
+import FloatingPanel
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, FloatingPanelControllerDelegate{
 
     @IBOutlet private var mapView: MKMapView!
+    @IBOutlet var fabBtn: MDCFloatingButton!
 
     private let spotRepository = SpotRepository()
     private var markers = [SpotMarker]()
@@ -20,10 +23,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // setup fab
+        fabBtn.accessibilityLabel = "Create"
+        fabBtn.minimumSize = CGSize(width: 32, height: 32)
+        Theme.applyThemeToFab(fabBtn)
+        
+        // setup custom markers
         mapView.delegate = self
         mapView.register(SpotMarkerView.self, forAnnotationViewWithReuseIdentifier: SpotMarkerView.identifier)
         mapView.register(CurrentLocationMarkerView.self, forAnnotationViewWithReuseIdentifier: CurrentLocationMarkerView.identifier)
         
+        // load spots
         spotRepository.fetchSpots(completion: { res in
             switch (res){
             case .success(let spots):
@@ -32,6 +43,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
                 self.handleFailure(error: error)
             }
         })
+        
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,7 +64,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     private func handleFailure(error: Error){
         showSnackBar(message: error.localizedDescription)
     }
-    
 
     // loading custom markers
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -106,7 +118,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         marker.mapItem?.openInMaps(launchOptions: launchOptions)
     }
     
-    //current loc
+    // current loc
     //MARK:- CLLocationManagerDelegate Methods
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
@@ -128,7 +140,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Error - locationManager: \(error.localizedDescription)")
     }
-    //MARK:- Intance Methods
 
     func determineCurrentLocation() {
         locationManager = CLLocationManager()
@@ -139,6 +150,19 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
+    }
+    
+    //MARK: adding spot
+    @IBAction func fabBtnPressed(_ sender: Any) {
+        // setup floating panel
+        let fpc = FloatingPanelController()
+        fpc.delegate = self
+        guard let contentVC = storyboard?.instantiateViewController(identifier: "fpcContent") as? ContentFloatingPanelViewController else {
+            return
+        }
+        fpc.set(contentViewController: contentVC)
+        fpc.addPanel(toParent: self, animated: true)
+        fabBtn.visibility = .gone
     }
 
 }

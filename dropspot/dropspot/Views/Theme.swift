@@ -123,6 +123,10 @@ class Theme {
         txtf.applyTheme(withScheme: globalContainerSheme())
     }
     
+    static func applyThemeToFab(_ fab: MDCFloatingButton){
+        fab.applySecondaryTheme(withScheme: globalContainerSheme())
+    }
+    
 }
 
     

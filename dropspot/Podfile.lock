@@ -1,4 +1,5 @@
 PODS:
+  - FloatingPanel (2.1.0)
   - KYDrawerController (2.1.0)
   - MaterialComponents/ActivityIndicator (119.3.0):
     - MaterialComponents/Palettes
@@ -217,6 +218,7 @@ PODS:
   - MotionInterchange (1.6.0)
 
 DEPENDENCIES:
+  - FloatingPanel
   - KYDrawerController
   - MaterialComponents/ActivityIndicator
   - MaterialComponents/Buttons
@@ -237,6 +239,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - FloatingPanel
     - KYDrawerController
     - MaterialComponents
     - MDFInternationalization
@@ -245,6 +248,7 @@ SPEC REPOS:
     - MotionInterchange
 
 SPEC CHECKSUMS:
+  FloatingPanel: 1af47b69e26df98b8728307254a9a0f4eb3cd645
   KYDrawerController: baad0e63b09c0cb564bd48f0f7f70f45d9176ebc
   MaterialComponents: 49658f0fd7ef6e098e9943fce3f293e700595570
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
@@ -252,6 +256,6 @@ SPEC CHECKSUMS:
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
 
-PODFILE CHECKSUM: ef777c2adb274942c46148805b185740bb1599e4
+PODFILE CHECKSUM: 5c129b2de5a8cb1ce8a3550117377c26c1766a94
 
 COCOAPODS: 1.10.0
