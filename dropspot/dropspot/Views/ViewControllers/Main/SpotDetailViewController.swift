@@ -18,6 +18,7 @@ class SpotDetailViewController: UIViewController {
     @IBOutlet var spotInfoStack: UIStackView!
     @IBOutlet var parkStaticLbl: UILabel!
     @IBOutlet var dmgStaticLbl: UILabel!
+    @IBOutlet var rankImg: UIImageView!
     private let activityIndicator: MDCActivityIndicator = MDCActivityIndicator()
 
     private let spotDetailRepository = SpotDetailRepository()
@@ -62,6 +63,7 @@ class SpotDetailViewController: UIViewController {
         self.spotInfoStack.visibility = .visible
         self.spotInfoStack.layer.cornerRadius = 4
         self.spotInfoStack.layer.masksToBounds = true
+        self.rankImg.image = UIImage(named: String(spotDetail.rank))
         self.activityIndicator.stopAnimating()
         if let cat = spotDetail.parkCategory,
            let fee = spotDetail.entranceFee {
