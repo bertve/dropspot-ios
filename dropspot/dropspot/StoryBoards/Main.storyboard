@@ -269,7 +269,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="PYC-iE-wMV" userLabel="contentStack">
-                                <rect key="frame" x="0.0" y="52" width="414" height="425"/>
+                                <rect key="frame" x="0.0" y="52" width="414" height="810"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="10" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="yrq-MP-V2q" userLabel="headerControls">
                                         <rect key="frame" x="16" y="8" width="382" height="47"/>
@@ -394,17 +394,17 @@
                                             </stackView>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vge-eR-Pjg" userLabel="sliderContainer">
-                                        <rect key="frame" x="16" y="321" width="382" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="240" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="vge-eR-Pjg" userLabel="sliderContainer">
+                                        <rect key="frame" x="16" y="321" width="382" height="435"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="240" horizontalCompressionResistancePriority="1000" text="Damage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfD-L9-jHc">
-                                                <rect key="frame" x="0.0" y="0.0" width="63.5" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="63.5" height="435"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="240" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="SXg-U0-mmG">
-                                                <rect key="frame" x="69.5" y="0.0" width="243" height="51"/>
+                                                <rect key="frame" x="69.5" y="0.0" width="243" height="436"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="visibilityState" value="gone"/>
                                                 </userDefinedRuntimeAttributes>
@@ -412,8 +412,8 @@
                                                     <action selector="sliderValChanged:" destination="RZL-QK-GzV" eventType="valueChanged" id="wqS-Rj-EvH"/>
                                                 </connections>
                                             </slider>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="240" horizontalCompressionResistancePriority="1000" text="" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nok-RX-Ue6">
-                                                <rect key="frame" x="318.5" y="0.0" width="63.5" height="50"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="240" horizontalCompressionResistancePriority="1000" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nok-RX-Ue6">
+                                                <rect key="frame" x="318.5" y="0.0" width="63.5" height="435"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -423,8 +423,8 @@
                                             <constraint firstItem="nok-RX-Ue6" firstAttribute="width" secondItem="XfD-L9-jHc" secondAttribute="width" id="Jg7-Ch-Hzj"/>
                                         </constraints>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6N-Df-XFQ" customClass="MDCButton">
-                                        <rect key="frame" x="16" y="387" width="382" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="800" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6N-Df-XFQ" customClass="MDCButton">
+                                        <rect key="frame" x="16" y="772" width="382" height="30"/>
                                         <state key="normal" title="Add"/>
                                         <connections>
                                             <action selector="addBtnPressed:" destination="RZL-QK-GzV" eventType="touchUpInside" id="1Dm-VE-dia"/>
@@ -437,6 +437,7 @@
                         <viewLayoutGuide key="safeArea" id="fOq-vE-K5W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fOq-vE-K5W" firstAttribute="bottom" secondItem="PYC-iE-wMV" secondAttribute="bottom" id="aep-Yj-YA1"/>
                             <constraint firstItem="PYC-iE-wMV" firstAttribute="top" secondItem="fOq-vE-K5W" secondAttribute="top" constant="8" id="eux-DC-jWw"/>
                             <constraint firstItem="fOq-vE-K5W" firstAttribute="trailing" secondItem="PYC-iE-wMV" secondAttribute="trailing" id="iKo-zO-veo"/>
                             <constraint firstItem="PYC-iE-wMV" firstAttribute="leading" secondItem="fOq-vE-K5W" secondAttribute="leading" id="iPj-7w-c42"/>
@@ -464,7 +465,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wa-DG-aDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2313" y="1433"/>
+            <point key="canvasLocation" x="-2313.04347826087" y="1432.3660714285713"/>
         </scene>
     </scenes>
     <resources>

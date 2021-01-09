@@ -30,8 +30,7 @@ class ContentFloatingPanelViewController: FormValidatingKeyboardHandlingViewCont
     
     // park spot elements
     private var parkSpotUIElements : [UIView] = []
-    private var bottomConstraint : NSLayoutConstraint?  = nil
-    private var fieldsStackHeightConstraint : NSLayoutConstraint? = nil
+    private var fieldshelper: [UITextField]?
     
     // picker helpers
     var parkCatList : [ParkCategory] = ParkCategory.allCases
@@ -48,18 +47,15 @@ class ContentFloatingPanelViewController: FormValidatingKeyboardHandlingViewCont
         feeValLbl.text = feeSlider.value.formatAsEuroCurrency()
         
         // setup formvalidater and keyboardhandling
-        self.fields = [spotName, parkCategory,  street, houseNumber, street, houseNumber, city, postalCode, state, country]
+        self.formValidator = AddStreetSpotFormValidator(spotName: spotName)
+        self.fields = [spotName]
+        fieldshelper = [spotName, parkCategory, street, houseNumber, city, postalCode, state, country]
+        
         self.formConfirmingButton = addBtn
         
         // set parkspot ui elements
         parkSpotUIElements = [feeSlider, damageLbl, feeValLbl, parkCategory, street, houseNumber, street, houseNumber, city, postalCode, state, country]
         
-        // set constraint
-        bottomConstraint = NSLayoutConstraint(item: view!, attribute: .bottom, relatedBy: .equal, toItem: contentStack, attribute: .bottom, multiplier: 1, constant: 0)
-        let spotNameHeight = spotName.intrinsicContentSize.height
-        fieldsStackHeightConstraint =  NSLayoutConstraint(item: fieldsStack!,attribute: .height, relatedBy: .equal, toItem: spotName, attribute: .height, multiplier: 1, constant: spotNameHeight)
-        
-        constraintFieldsStack()
     }
     
     private func applyTheme(){
@@ -98,44 +94,28 @@ class ContentFloatingPanelViewController: FormValidatingKeyboardHandlingViewCont
     }
     
     private func activateStreetMode(){
+        self.switchFields()
+        self.formValidator = AddStreetSpotFormValidator(spotName: spotName)
         parkSpotUIElements.forEach { el in
             el.visibility = .gone
         }
-        undoConstraintContentStackToBottom()
-        constraintFieldsStack()
     }
     
     private func activateParkMode(){
+        self.switchFields()
+        self.formValidator = AddParkSpotFormValidator(spotName: spotName, parkCategory: parkCategory, street: street, houseNumber: houseNumber, city: city, postalCode: postalCode, state: state, country: country)
         parkSpotUIElements.forEach { el in
             el.visibility = .visible
         }
-        undoConstraintFieldsStack()
-        constraintContentStackToBottom()
     }
     
-    private func constraintContentStackToBottom(){
-        if let constraint = bottomConstraint {
-            view.addConstraint(constraint)
-        }
+    private func switchFields(){
+        let switchHelper = self.fieldshelper!
+        self.fieldshelper = self.fields
+        self.fields = switchHelper
     }
     
-    private func undoConstraintContentStackToBottom(){
-        if let constraint = bottomConstraint {
-            view.removeConstraint(constraint)
-        }
-    }
-    
-    private func constraintFieldsStack() {
-        if let constraint = fieldsStackHeightConstraint {
-            fieldsStack.addConstraint(constraint)
-        }
-    }
-    
-    private func undoConstraintFieldsStack() {
-        if let constraint = fieldsStackHeightConstraint {
-            fieldsStack.removeConstraint(constraint)
-        }
-    }
+
 
     // picker view
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -176,13 +156,12 @@ class ContentFloatingPanelViewController: FormValidatingKeyboardHandlingViewCont
     }
     
     private func addStreetSpot(){
-        
+        print("add street spot")
     }
     
     private func addParkSpot(){
-        
+        print("add park spot")
     }
-    
     
 }
 

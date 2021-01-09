@@ -19,6 +19,8 @@
 		1527AEE325A546150020CB36 /* SpotsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1527AEE225A546150020CB36 /* SpotsCollectionViewController.swift */; };
 		1527AEE925A546DA0020CB36 /* SpotDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1527AEE825A546DA0020CB36 /* SpotDetailCollectionViewCell.swift */; };
 		1532722725A367B0004D4E76 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1532722625A367B0004D4E76 /* MapViewController.swift */; };
+		1562714925A910D7005A08A9 /* AddStreetSpotFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562714825A910D7005A08A9 /* AddStreetSpotFormValidator.swift */; };
+		1562714E25A917B2005A08A9 /* AddParkSpotFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562714D25A917B2005A08A9 /* AddParkSpotFormValidator.swift */; };
 		15768AA42598F05000409E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15768AA32598F05000409E2B /* AppDelegate.swift */; };
 		15768AA82598F05000409E2B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15768AA72598F05000409E2B /* LoginViewController.swift */; };
 		15768AAB2598F05000409E2B /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15768AA92598F05000409E2B /* Auth.storyboard */; };
@@ -103,6 +105,8 @@
 		1527AEE225A546150020CB36 /* SpotsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpotsCollectionViewController.swift; path = "../../../../../../../learning swift app dev/myProjects/spotWebTest/spotWebTest/ViewControllers/SpotsCollectionViewController.swift"; sourceTree = "<group>"; };
 		1527AEE825A546DA0020CB36 /* SpotDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpotDetailCollectionViewCell.swift; path = "../../../../../../learning swift app dev/myProjects/spotWebTest/spotWebTest/cells/SpotDetailCollectionViewCell.swift"; sourceTree = "<group>"; };
 		1532722625A367B0004D4E76 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		1562714825A910D7005A08A9 /* AddStreetSpotFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStreetSpotFormValidator.swift; sourceTree = "<group>"; };
+		1562714D25A917B2005A08A9 /* AddParkSpotFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParkSpotFormValidator.swift; sourceTree = "<group>"; };
 		15768AA02598F05000409E2B /* dropspot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dropspot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15768AA32598F05000409E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15768AA72598F05000409E2B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -389,6 +393,8 @@
 				15C946F3259BA49400D970E9 /* FormValidationUtil.swift */,
 				15C946FB259BA85C00D970E9 /* Validation.swift */,
 				15C9471D259BF78C00D970E9 /* RegisterFormValidator.swift */,
+				1562714825A910D7005A08A9 /* AddStreetSpotFormValidator.swift */,
+				1562714D25A917B2005A08A9 /* AddParkSpotFormValidator.swift */,
 			);
 			path = FormValidators;
 			sourceTree = "<group>";
@@ -720,6 +726,7 @@
 				15D30D3E25A768BD00A90B28 /* CurrentLocationMarker.swift in Sources */,
 				15C9476F259D600C00D970E9 /* LoginRequestModel.swift in Sources */,
 				15D30D7025A8A8C600A90B28 /* ParkCategory.swift in Sources */,
+				1562714E25A917B2005A08A9 /* AddParkSpotFormValidator.swift in Sources */,
 				15768AA82598F05000409E2B /* LoginViewController.swift in Sources */,
 				15C9471E259BF78C00D970E9 /* RegisterFormValidator.swift in Sources */,
 				15C947B1259E382800D970E9 /* RequestModelBasedResourceApiRequest.swift in Sources */,
@@ -764,6 +771,7 @@
 				15C94789259E25A600D970E9 /* PostRequestModelBasedResourceApiRequest.swift in Sources */,
 				15C94731259D5A3300D970E9 /* ResourceService.swift in Sources */,
 				15C947A7259E280100D970E9 /* ApiRequest.swift in Sources */,
+				1562714925A910D7005A08A9 /* AddStreetSpotFormValidator.swift in Sources */,
 				15932F7E25A67EB700997199 /* SpotMarker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
