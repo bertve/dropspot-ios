@@ -16,13 +16,18 @@ class SpotDetailViewController: UIViewController {
     @IBOutlet var parkCatLbl: UILabel!
     @IBOutlet var damageLbl: UILabel!
     @IBOutlet var spotInfoStack: UIStackView!
+    @IBOutlet var parkStaticLbl: UILabel!
+    @IBOutlet var dmgStaticLbl: UILabel!
     private let activityIndicator: MDCActivityIndicator = MDCActivityIndicator()
 
     private let spotDetailRepository = SpotDetailRepository()
+    var spotDetail : SpotDetail?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let spot = spotDetail {
+            updateUI(with: spot)
+        }
     }
     
     func setSpotDetailById(_ id: Int){
@@ -39,32 +44,40 @@ class SpotDetailViewController: UIViewController {
         spotDetailRepository.fetchSpotDetail(id: id){ (res) in
             switch res {
             case .success(let spot):
+                DispatchQueue.main.async {
                 self.updateUI(with: spot)
+                }
             case .failure(let error):
+                DispatchQueue.main.async {
                 self.displayError(error: error)
+                }
             }
         }
     }
     
     func updateUI(with spotDetail: SpotDetail){
-        DispatchQueue.main.async {
-            self.spotNameLbl.text = spotDetail.spotName
-            self.creatorNameLbl.text = spotDetail.creatorName
-            self.locationLbl.text = spotDetail.locationString
-            self.parkCatLbl.text = spotDetail.parkCategory?.rawValue
-            self.damageLbl.text = spotDetail.entranceFee?.formatAsEuroCurrency()
-            self.spotInfoStack.visibility = .visible
-            self.spotInfoStack.layer.cornerRadius = 4
-            self.spotInfoStack.layer.masksToBounds = true
-            self.activityIndicator.stopAnimating()
+        self.spotNameLbl.text = spotDetail.spotName
+        self.creatorNameLbl.text = spotDetail.creatorName
+        self.locationLbl.text = spotDetail.locationString
+        self.spotInfoStack.visibility = .visible
+        self.spotInfoStack.layer.cornerRadius = 4
+        self.spotInfoStack.layer.masksToBounds = true
+        self.activityIndicator.stopAnimating()
+        if let cat = spotDetail.parkCategory,
+           let fee = spotDetail.entranceFee {
+            self.parkCatLbl.text = cat.rawValue
+            self.damageLbl.text = fee.formatAsEuroCurrency()
+        } else {
+            self.dmgStaticLbl.visibility = .gone
+            self.parkStaticLbl.visibility = .gone
         }
     }
     
+
+    
     private func displayError(error: Error){
-        DispatchQueue.main.async {
             self.activityIndicator.stopAnimating()
             self.showSnackBar(message: error.localizedDescription)
-        }
     }
 
 }

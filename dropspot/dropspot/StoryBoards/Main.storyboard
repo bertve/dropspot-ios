@@ -15,7 +15,7 @@
             <objects>
                 <viewController storyboardIdentifier="home" id="zZv-hi-sZD" customClass="HomeViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VYQ-k1-SdT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBp-6M-Bgj">
@@ -217,7 +217,7 @@
             <objects>
                 <viewController id="XJ0-Cc-zfe" customClass="SpotDetailViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oR1-Mv-pPv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spot Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKH-3f-9jr">
@@ -245,7 +245,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="sQB-t8-Vdu">
-                                <rect key="frame" x="16" y="274" width="382" height="126.5"/>
+                                <rect key="frame" x="16" y="274" width="382" height="159.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2mD-0T-WHf">
                                         <rect key="frame" x="16" y="16" width="350" height="41"/>
@@ -265,10 +265,10 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BER-tc-bOw">
-                                        <rect key="frame" x="16" y="73" width="350" height="37.5"/>
+                                        <rect key="frame" x="16" y="73" width="350" height="70.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XPu-4C-qZj">
-                                                <rect key="frame" x="0.0" y="0.0" width="175" height="37.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="175" height="70.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Park " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEO-ZZ-enK">
                                                         <rect key="frame" x="68" y="0.0" width="39.5" height="20.5"/>
@@ -276,8 +276,8 @@
                                                         <color key="textColor" name="AccentColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRX-Ly-ti7">
-                                                        <rect key="frame" x="70" y="20.5" width="35.5" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRX-Ly-ti7">
+                                                        <rect key="frame" x="62.5" y="20.5" width="50" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -285,7 +285,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VnY-h4-8bS">
-                                                <rect key="frame" x="175" y="0.0" width="175" height="37.5"/>
+                                                <rect key="frame" x="175" y="0.0" width="175" height="70.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Damage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahi-Ye-V9z">
                                                         <rect key="frame" x="55" y="0.0" width="65" height="20.5"/>
@@ -293,8 +293,8 @@
                                                         <color key="textColor" name="AccentColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daU-cf-xUj">
-                                                        <rect key="frame" x="70" y="20.5" width="35.5" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daU-cf-xUj">
+                                                        <rect key="frame" x="62.5" y="20.5" width="50" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
@@ -332,8 +332,10 @@
                     <connections>
                         <outlet property="creatorNameLbl" destination="h1p-oL-O0O" id="BLq-UB-xyz"/>
                         <outlet property="damageLbl" destination="daU-cf-xUj" id="tWh-Ux-Avb"/>
+                        <outlet property="dmgStaticLbl" destination="ahi-Ye-V9z" id="fOL-dA-Jzl"/>
                         <outlet property="locationLbl" destination="vhE-no-uKq" id="gZI-5F-aUX"/>
                         <outlet property="parkCatLbl" destination="HRX-Ly-ti7" id="3wn-g8-lA4"/>
+                        <outlet property="parkStaticLbl" destination="YEO-ZZ-enK" id="6Ct-ma-YrY"/>
                         <outlet property="spotInfoStack" destination="sQB-t8-Vdu" id="fgM-Wb-eUG"/>
                         <outlet property="spotNameLbl" destination="wKH-3f-9jr" id="aAi-tJ-rwJ"/>
                     </connections>
@@ -347,7 +349,7 @@
             <objects>
                 <collectionViewController id="psa-mg-fd9" customClass="SpotsCollectionViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="cOE-RM-9Au">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gsf-qZ-cOq">
@@ -597,7 +599,7 @@
             <objects>
                 <viewController id="Hgd-lY-mOR" customClass="MeViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YS2-dO-U7U">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1B4-be-Axu">
