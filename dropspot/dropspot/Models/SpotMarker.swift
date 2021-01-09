@@ -21,7 +21,6 @@ class SpotMarker: NSObject, MKAnnotation {
         self.spotId = spotId
         self.title = spotName
         self.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
-        
         super.init()
     }
     

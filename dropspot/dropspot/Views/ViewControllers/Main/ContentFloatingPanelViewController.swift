@@ -12,7 +12,6 @@ class ContentFloatingPanelViewController: FormValidatingKeyboardHandlingViewCont
     
     @IBOutlet var flagIndicator: UIImageView!
     @IBOutlet var spotToggle: UISwitch!
-    @IBOutlet var infoBtn: UIButton!
     @IBOutlet var spotName: MDCOutlinedTextField!
     @IBOutlet var parkCategory: MDCOutlinedTextField!
     @IBOutlet var street: MDCOutlinedTextField!
@@ -35,6 +34,22 @@ class ContentFloatingPanelViewController: FormValidatingKeyboardHandlingViewCont
     // picker helpers
     var parkCatList : [ParkCategory] = ParkCategory.allCases
     private var selectedParkCategory: ParkCategory?
+    
+    // delegate
+    var delegate: ContentFloatingPanelDelegate?
+    
+    // coordinate
+    var latitude: Double? {
+        didSet{
+            if latitude != nil {
+                flagIndicator.image = UIImage(named: "flagOutlined")
+            } else {
+                flagIndicator.image = UIImage(named: "flag")
+            }
+        }
+    }
+    
+    var longitude: Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +104,12 @@ class ContentFloatingPanelViewController: FormValidatingKeyboardHandlingViewCont
         }
     }
     
+    @IBAction func closeBtnClicked(_ sender: Any) {
+        if let del = delegate {
+            del.exitFPCClicked()
+        }
+    }
+    
     @IBAction func sliderValChanged(_ sender: UISlider) {
         feeValLbl.text = sender.value.formatAsEuroCurrency()
     }
@@ -104,6 +125,7 @@ class ContentFloatingPanelViewController: FormValidatingKeyboardHandlingViewCont
     private func activateParkMode(){
         self.switchFields()
         self.formValidator = AddParkSpotFormValidator(spotName: spotName, parkCategory: parkCategory, street: street, houseNumber: houseNumber, city: city, postalCode: postalCode, state: state, country: country)
+        super.updateFormConfirmingButtonState()
         parkSpotUIElements.forEach { el in
             el.visibility = .visible
         }
@@ -115,9 +137,7 @@ class ContentFloatingPanelViewController: FormValidatingKeyboardHandlingViewCont
         self.fields = switchHelper
     }
     
-
-
-    // picker view
+    // MARK: picker
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -151,27 +171,45 @@ class ContentFloatingPanelViewController: FormValidatingKeyboardHandlingViewCont
           view.endEditing(true)
     }
     
+    // MARK: add spot
     @IBAction func addBtnPressed(_ sender: Any) {
-        spotToggle.isOn ? addParkSpot() : addStreetSpot()
+        if let lat = latitude,
+           let long = longitude {
+            spotToggle.isOn ? addParkSpot(lat: lat,long: long) : addStreetSpot(lat: lat, long: long)
+        } else {
+            showSnackBar(message: "Mark the map to indicate your new spot location!")
+        }
     }
     
-    private func addStreetSpot(){
-        print("add street spot")
+    private func addStreetSpot(lat: Double,long: Double){
+        if let del = delegate {
+            del.addStreetSpot(requestModel: AddStreetSpotRequestModel(name: spotName.text!.trim(), latitude: lat, longitude: long))
+        }
     }
     
-    private func addParkSpot(){
-        print("add park spot")
+    private func addParkSpot(lat: Double,long: Double ){
+        if let del = delegate {
+            del.addParkSpot(requestModel: AddParkSpotRequestModel(name: spotName.text!.trim(),
+                                                               latitude: lat,
+                                                               longitude: long,
+                                                               entranceFee: feeSlider.value,
+                                                               parkCategory: selectedParkCategory!,
+                                                               street: street.text!.trim(),
+                                                               houseNumber: houseNumber.text!.trim(),
+                                                               postalCode: postalCode.text!.trim(),
+                                                               city: city.text!.trim(),
+                                                               state: state.text!.trim(),
+                                                               country: country.text!.trim())
+            )
+        }
     }
     
-}
-
-extension Float {
-
-    func formatAsEuroCurrency() -> String? {
-        let currencyFormatter = NumberFormatter()
-        currencyFormatter.numberStyle = .currency
-        currencyFormatter.currencyCode = "EUR"
-        currencyFormatter.maximumFractionDigits = floor(self) == self ? 0 : 2
-        return currencyFormatter.string(from: NSNumber(value: self))
+    func clearFields() {
+        self.fields.forEach{ field in
+            field.text = ""
+        }
+        self.feeSlider.value = 0
+        selectedParkCategory = nil
     }
+    
 }

@@ -278,7 +278,7 @@
                                                 <rect key="frame" x="0.0" y="8" width="24" height="31"/>
                                             </imageView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RfF-g5-Lsm">
-                                                <rect key="frame" x="111.5" y="8" width="158" height="31"/>
+                                                <rect key="frame" x="114" y="8" width="158" height="31"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Street" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8DE-3h-0jk">
                                                         <rect key="frame" x="0.0" y="0.0" width="46.5" height="31"/>
@@ -304,8 +304,13 @@
                                                     <constraint firstItem="TL5-q6-njE" firstAttribute="width" secondItem="8DE-3h-0jk" secondAttribute="width" id="omZ-GS-Qic"/>
                                                 </constraints>
                                             </stackView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZP2-h9-7BI">
-                                                <rect key="frame" x="357" y="8" width="25" height="31"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZP2-h9-7BI" userLabel="Exit Btn">
+                                                <rect key="frame" x="362" y="8" width="20" height="31"/>
+                                                <color key="tintColor" name="PrimaryColor"/>
+                                                <state key="normal" image="x.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="closeBtnClicked:" destination="RZL-QK-GzV" eventType="touchUpInside" id="oAg-Ci-6JN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="0.0" bottom="8" trailing="0.0"/>
@@ -454,7 +459,6 @@
                         <outlet property="fieldsStack" destination="V8g-rl-x8I" id="qz8-Mc-Cod"/>
                         <outlet property="flagIndicator" destination="PYK-t0-fpk" id="RY8-IV-bU3"/>
                         <outlet property="houseNumber" destination="mzG-Fb-7k2" id="iXP-Zv-b3l"/>
-                        <outlet property="infoBtn" destination="ZP2-h9-7BI" id="dPG-c8-qkn"/>
                         <outlet property="parkCategory" destination="fbL-tW-xRF" id="aBp-s2-UVb"/>
                         <outlet property="postalCode" destination="v7w-N2-f3V" id="bwQ-dV-F7W"/>
                         <outlet property="spotName" destination="AmB-rr-h0X" id="xgh-cY-DNz"/>
@@ -477,6 +481,7 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="skaterProfile" width="512" height="512"/>
+        <image name="x.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.50196078431372548" green="0.88627450980392153" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

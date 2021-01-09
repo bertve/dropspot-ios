@@ -28,6 +28,14 @@ class SpotRepository {
         return nil
     }
     
+    func addStreetSpot(requestModel: AddStreetSpotRequestModel, completion: @escaping (Result<Spot,Error>) -> Void){
+        spotService.addStreetSpot(requestModel: requestModel, completion: completion)
+    }
+    
+    func addParkSpot(requestModel: AddParkSpotRequestModel, completion: @escaping (Result<Spot,Error>) -> Void){
+        spotService.addParkSpot(requestModel: requestModel, completion: completion)
+    }
+    
     func resetSpotsInLocalDir() {
         try? FileManager.default.removeItem(at: spotsFileURL)
     }

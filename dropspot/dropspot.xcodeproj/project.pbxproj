@@ -21,6 +21,12 @@
 		1532722725A367B0004D4E76 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1532722625A367B0004D4E76 /* MapViewController.swift */; };
 		1562714925A910D7005A08A9 /* AddStreetSpotFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562714825A910D7005A08A9 /* AddStreetSpotFormValidator.swift */; };
 		1562714E25A917B2005A08A9 /* AddParkSpotFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562714D25A917B2005A08A9 /* AddParkSpotFormValidator.swift */; };
+		1562715325A9346F005A08A9 /* ContentFloatingPanelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562715225A9346F005A08A9 /* ContentFloatingPanelDelegate.swift */; };
+		1562715825A936C0005A08A9 /* AddStreetSpotRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562715725A936C0005A08A9 /* AddStreetSpotRequestModel.swift */; };
+		1562715D25A9379F005A08A9 /* AddParkSpotRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562715C25A9379F005A08A9 /* AddParkSpotRequestModel.swift */; };
+		1562716825A93C4F005A08A9 /* FloatExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562716725A93C4F005A08A9 /* FloatExt.swift */; };
+		1562716D25A9493C005A08A9 /* NewSpotMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562716C25A9493C005A08A9 /* NewSpotMarker.swift */; };
+		1562717225A94A2C005A08A9 /* NewSpotMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1562717125A94A2C005A08A9 /* NewSpotMarkerView.swift */; };
 		15768AA42598F05000409E2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15768AA32598F05000409E2B /* AppDelegate.swift */; };
 		15768AA82598F05000409E2B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15768AA72598F05000409E2B /* LoginViewController.swift */; };
 		15768AAB2598F05000409E2B /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15768AA92598F05000409E2B /* Auth.storyboard */; };
@@ -37,6 +43,8 @@
 		1595248625A2634F00EA7D2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1595248525A2634F00EA7D2A /* Main.storyboard */; };
 		1595249625A2731900EA7D2A /* NavDrawerContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1595249525A2731900EA7D2A /* NavDrawerContentViewController.swift */; };
 		159EAABF25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159EAABE25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift */; };
+		15B2546325A960CA000AC541 /* AddStreetSpotRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2546225A960CA000AC541 /* AddStreetSpotRequest.swift */; };
+		15B2546825A960DA000AC541 /* AddParkSpotRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B2546725A960DA000AC541 /* AddParkSpotRequest.swift */; };
 		15C946C2259A8CFA00D970E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946C1259A8CFA00D970E9 /* RegisterViewController.swift */; };
 		15C946CF259AA2BA00D970E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946CE259AA2BA00D970E9 /* HomeViewController.swift */; };
 		15C946D5259AA66C00D970E9 /* LoginFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946D4259AA66C00D970E9 /* LoginFormValidator.swift */; };
@@ -107,6 +115,12 @@
 		1532722625A367B0004D4E76 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		1562714825A910D7005A08A9 /* AddStreetSpotFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStreetSpotFormValidator.swift; sourceTree = "<group>"; };
 		1562714D25A917B2005A08A9 /* AddParkSpotFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParkSpotFormValidator.swift; sourceTree = "<group>"; };
+		1562715225A9346F005A08A9 /* ContentFloatingPanelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentFloatingPanelDelegate.swift; sourceTree = "<group>"; };
+		1562715725A936C0005A08A9 /* AddStreetSpotRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStreetSpotRequestModel.swift; sourceTree = "<group>"; };
+		1562715C25A9379F005A08A9 /* AddParkSpotRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParkSpotRequestModel.swift; sourceTree = "<group>"; };
+		1562716725A93C4F005A08A9 /* FloatExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExt.swift; sourceTree = "<group>"; };
+		1562716C25A9493C005A08A9 /* NewSpotMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSpotMarker.swift; sourceTree = "<group>"; };
+		1562717125A94A2C005A08A9 /* NewSpotMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSpotMarkerView.swift; sourceTree = "<group>"; };
 		15768AA02598F05000409E2B /* dropspot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dropspot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15768AA32598F05000409E2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15768AA72598F05000409E2B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +143,8 @@
 		1595248525A2634F00EA7D2A /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		1595249525A2731900EA7D2A /* NavDrawerContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavDrawerContentViewController.swift; sourceTree = "<group>"; };
 		159EAABE25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavDrawerNavigationDelegate.swift; sourceTree = "<group>"; };
+		15B2546225A960CA000AC541 /* AddStreetSpotRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStreetSpotRequest.swift; sourceTree = "<group>"; };
+		15B2546725A960DA000AC541 /* AddParkSpotRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddParkSpotRequest.swift; sourceTree = "<group>"; };
 		15C946C1259A8CFA00D970E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		15C946CE259AA2BA00D970E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		15C946D4259AA66C00D970E9 /* LoginFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormValidator.swift; sourceTree = "<group>"; };
@@ -229,6 +245,7 @@
 				15D30D6F25A8A8C600A90B28 /* ParkCategory.swift */,
 				15D30D7425A8ABCF00A90B28 /* Address.swift */,
 				15D30D7925A8B24100A90B28 /* CriterionScore.swift */,
+				1562716C25A9493C005A08A9 /* NewSpotMarker.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,6 +285,7 @@
 				1527AEE825A546DA0020CB36 /* SpotDetailCollectionViewCell.swift */,
 				15932F8225A696C000997199 /* SpotMarkerView.swift */,
 				15D30D3825A7684A00A90B28 /* CurrentLocationMarkerView.swift */,
+				1562717125A94A2C005A08A9 /* NewSpotMarkerView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -381,6 +399,7 @@
 			isa = PBXGroup;
 			children = (
 				159EAABE25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift */,
+				1562715225A9346F005A08A9 /* ContentFloatingPanelDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -407,6 +426,7 @@
 				152063CF25A13CCF00BAD678 /* StringExt.swift */,
 				15932F7725A6708100997199 /* FileManagerExt.swift */,
 				15D30D6A25A7E3E400A90B28 /* UIViewExt.swift */,
+				1562716725A93C4F005A08A9 /* FloatExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -419,6 +439,8 @@
 				15C9477D259E1AD700D970E9 /* LoginRequest.swift */,
 				152063C525A12D3300BAD678 /* RegisterRequest.swift */,
 				15D30D7E25A8BAFD00A90B28 /* SpotDetailsRequest.swift */,
+				15B2546225A960CA000AC541 /* AddStreetSpotRequest.swift */,
+				15B2546725A960DA000AC541 /* AddParkSpotRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -428,6 +450,8 @@
 			children = (
 				15C9476E259D600C00D970E9 /* LoginRequestModel.swift */,
 				152063C025A12AE500BAD678 /* RegisterRequestModel.swift */,
+				1562715725A936C0005A08A9 /* AddStreetSpotRequestModel.swift */,
+				1562715C25A9379F005A08A9 /* AddParkSpotRequestModel.swift */,
 			);
 			path = RequestsModels;
 			sourceTree = "<group>";
@@ -720,10 +744,12 @@
 				1527AEE325A546150020CB36 /* SpotsCollectionViewController.swift in Sources */,
 				15D30D7525A8ABCF00A90B28 /* Address.swift in Sources */,
 				15D30D6B25A7E3E400A90B28 /* UIViewExt.swift in Sources */,
+				15B2546325A960CA000AC541 /* AddStreetSpotRequest.swift in Sources */,
 				15C94779259D63FB00D970E9 /* AppUser.swift in Sources */,
 				15C946EF259B9B9300D970E9 /* FormValidator.swift in Sources */,
 				15D30D7F25A8BAFD00A90B28 /* SpotDetailsRequest.swift in Sources */,
 				15D30D3E25A768BD00A90B28 /* CurrentLocationMarker.swift in Sources */,
+				1562715825A936C0005A08A9 /* AddStreetSpotRequestModel.swift in Sources */,
 				15C9476F259D600C00D970E9 /* LoginRequestModel.swift in Sources */,
 				15D30D7025A8A8C600A90B28 /* ParkCategory.swift in Sources */,
 				1562714E25A917B2005A08A9 /* AddParkSpotFormValidator.swift in Sources */,
@@ -734,11 +760,14 @@
 				1532722725A367B0004D4E76 /* MapViewController.swift in Sources */,
 				15C946FC259BA85C00D970E9 /* Validation.swift in Sources */,
 				15C94750259D5B2D00D970E9 /* SpotsRequest.swift in Sources */,
+				1562715D25A9379F005A08A9 /* AddParkSpotRequestModel.swift in Sources */,
 				15D30D8425A8BD1700A90B28 /* SpotDetailRepository.swift in Sources */,
 				159EAABF25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift in Sources */,
 				15C9472C259CD5AF00D970E9 /* FormValidatingKeyboardHandlingViewController.swift in Sources */,
+				15B2546825A960DA000AC541 /* AddParkSpotRequest.swift in Sources */,
 				15932F6325A63B3500997199 /* SpotRepository.swift in Sources */,
 				15D30D3925A7684A00A90B28 /* CurrentLocationMarkerView.swift in Sources */,
+				1562717225A94A2C005A08A9 /* NewSpotMarkerView.swift in Sources */,
 				152063CB25A136E300BAD678 /* UIViewControllerExt.swift in Sources */,
 				15C946D5259AA66C00D970E9 /* LoginFormValidator.swift in Sources */,
 				15C94740259D5A6800D970E9 /* SpotDetail.swift in Sources */,
@@ -751,6 +780,8 @@
 				1527AEC625A53AB50020CB36 /* Session.swift in Sources */,
 				1595249625A2731900EA7D2A /* NavDrawerContentViewController.swift in Sources */,
 				15C94774259D631500D970E9 /* MessageResponse.swift in Sources */,
+				1562716825A93C4F005A08A9 /* FloatExt.swift in Sources */,
+				1562716D25A9493C005A08A9 /* NewSpotMarker.swift in Sources */,
 				15D30D7A25A8B24100A90B28 /* CriterionScore.swift in Sources */,
 				1591E95425994B2600EEA918 /* Theme.swift in Sources */,
 				15768AA42598F05000409E2B /* AppDelegate.swift in Sources */,
@@ -765,6 +796,7 @@
 				15C946CF259AA2BA00D970E9 /* HomeViewController.swift in Sources */,
 				1527AEE925A546DA0020CB36 /* SpotDetailCollectionViewCell.swift in Sources */,
 				15C946F4259BA49400D970E9 /* FormValidationUtil.swift in Sources */,
+				1562715325A9346F005A08A9 /* ContentFloatingPanelDelegate.swift in Sources */,
 				15932F7325A652EB00997199 /* ResponseError.swift in Sources */,
 				15932F7825A6708100997199 /* FileManagerExt.swift in Sources */,
 				15C9477E259E1AD700D970E9 /* LoginRequest.swift in Sources */,

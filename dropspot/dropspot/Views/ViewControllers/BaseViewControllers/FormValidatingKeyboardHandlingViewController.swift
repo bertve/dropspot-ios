@@ -45,7 +45,7 @@ class FormValidatingKeyboardHandlingViewController: KeyboardHandlingViewControll
         return returnVal
     }
     
-    private func updateFormConfirmingButtonState() {
+    func updateFormConfirmingButtonState() {
         if let validator = formValidator,
            let btn = formConfirmingButton {
             btn.isEnabled = validator.validate()
