@@ -18,6 +18,14 @@ class SpotDetailRepository {
         spotService.fetchSpotDetails(completion: completion)
     }
     
+    func fetchMySpots(completion: @escaping (Result<[SpotDetail],Error>) -> Void) {
+        spotService.fetchMySpots(completion: completion)
+    }
+    
+    func fetchFavoriteSpots(completion: @escaping (Result<[SpotDetail],Error>) -> Void) {
+        spotService.fetchFavoriteSpots(completion: completion)
+    }
+    
     func getSpotDetails() -> [SpotDetail]? {
         if let localSpotsData = try? Data(contentsOf: spotDetailsFileURL),
            let decodedSpots : [SpotDetail] = try? decoder.decode([SpotDetail].self, from: localSpotsData){

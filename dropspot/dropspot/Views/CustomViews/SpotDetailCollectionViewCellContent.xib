@@ -20,22 +20,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="park" translatesAutoresizingMaskIntoConstraints="NO" id="B44-0i-ddC">
-                    <rect key="frame" x="16" y="32" width="81" height="81"/>
+                    <rect key="frame" x="16" y="48" width="49" height="49"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="B44-0i-ddC" secondAttribute="height" multiplier="1:1" id="LbD-Dw-FWq"/>
                     </constraints>
                 </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UAO-O6-Dbs" userLabel="text">
-                    <rect key="frame" x="113" y="16" width="299" height="113"/>
+                    <rect key="frame" x="81" y="16" width="331" height="113"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHf-Ec-MlH">
-                            <rect key="frame" x="0.0" y="0.0" width="299" height="24"/>
+                            <rect key="frame" x="0.0" y="0.0" width="331" height="24"/>
                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnb-BA-y12">
-                            <rect key="frame" x="0.0" y="24" width="299" height="89"/>
+                            <rect key="frame" x="0.0" y="24" width="331" height="89"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -58,9 +58,9 @@
                 <constraint firstItem="UAO-O6-Dbs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="PSZ-gf-gFF"/>
                 <constraint firstAttribute="trailing" secondItem="vC6-Wh-laD" secondAttribute="trailing" constant="16" id="T6T-3B-OD2"/>
                 <constraint firstItem="UAO-O6-Dbs" firstAttribute="leading" secondItem="B44-0i-ddC" secondAttribute="trailing" constant="16" id="TeI-vm-jz8"/>
-                <constraint firstItem="B44-0i-ddC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="32" id="Tv7-pv-QO4"/>
+                <constraint firstItem="B44-0i-ddC" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="48" id="Tv7-pv-QO4"/>
                 <constraint firstItem="B44-0i-ddC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="qhp-2k-8aZ"/>
-                <constraint firstAttribute="bottom" secondItem="B44-0i-ddC" secondAttribute="bottom" constant="32" id="xyB-AG-WZf"/>
+                <constraint firstAttribute="bottom" secondItem="B44-0i-ddC" secondAttribute="bottom" constant="48" id="xyB-AG-WZf"/>
             </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>

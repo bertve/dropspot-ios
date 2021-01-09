@@ -37,11 +37,12 @@ class HomeViewController: UIViewController, NavDrawerNavigationDelegate{
     //MARK: NavDrawerNavigationDelegate
     func meNavItemWasClicked() {
         closeDrawer()
+        performSegue(withIdentifier: "toMe", sender: self)
     }
     
     func spotsNavItemWasClicked() {
-        performSegue(withIdentifier: "toSpots", sender: self)
         closeDrawer()
+        performSegue(withIdentifier: "toSpots", sender: self)
     }
     
     func logoutNavItemWasClicked() {
