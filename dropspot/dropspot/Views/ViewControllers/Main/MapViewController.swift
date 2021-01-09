@@ -25,6 +25,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     private var fpc: FloatingPanelController?
     private var fpcContent: ContentFloatingPanelViewController?
     
+    var delegate: MapDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -138,7 +140,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     }
     
     
-    // navigate to selected spot
+    // navigate to selected spot or spotdetail
     func mapView(
       _ mapView: MKMapView,
       annotationView view: MKAnnotationView,
@@ -147,11 +149,18 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
       guard let marker = view.annotation as? SpotMarker else {
         return
       }
+        
+        if control.accessibilityIdentifier == "navigate" {
+            let launchOptions = [
+              MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking
+            ]
+              marker.mapItem?.openInMaps(launchOptions: launchOptions)
+        } else {
+            if let delegate = delegate {
+                delegate.spotMarkerClicked(spotId: marker.spotId)
+            }
+        }
 
-      let launchOptions = [
-        MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking
-      ]
-        marker.mapItem?.openInMaps(launchOptions: launchOptions)
     }
     
     // current loc

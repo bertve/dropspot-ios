@@ -18,6 +18,10 @@ class SpotDetailRepository {
         spotService.fetchSpotDetails(completion: completion)
     }
     
+    func fetchSpotDetail(id: Int ,completion: @escaping (Result<SpotDetail,Error>) -> Void) {
+        spotService.fetchSpotDetail(id: id,completion: completion)
+    }
+    
     func fetchMySpots(completion: @escaping (Result<[SpotDetail],Error>) -> Void) {
         spotService.fetchMySpots(completion: completion)
     }

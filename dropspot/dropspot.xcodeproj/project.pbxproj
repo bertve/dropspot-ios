@@ -50,6 +50,8 @@
 		15B254A625AA3A69000AC541 /* MySpotsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B254A525AA3A69000AC541 /* MySpotsRequest.swift */; };
 		15B254AB25AA43E4000AC541 /* FavoriteSpotsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B254AA25AA43E4000AC541 /* FavoriteSpotsRequest.swift */; };
 		15B254B025AA45B4000AC541 /* SpotDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B254AF25AA45B4000AC541 /* SpotDetailViewController.swift */; };
+		15B254B825AA56F4000AC541 /* SpotDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B254B725AA56F4000AC541 /* SpotDetailRequest.swift */; };
+		15B254BD25AA5BBA000AC541 /* MapDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B254BC25AA5BBA000AC541 /* MapDelegate.swift */; };
 		15C946C2259A8CFA00D970E9 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946C1259A8CFA00D970E9 /* RegisterViewController.swift */; };
 		15C946CF259AA2BA00D970E9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946CE259AA2BA00D970E9 /* HomeViewController.swift */; };
 		15C946D5259AA66C00D970E9 /* LoginFormValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C946D4259AA66C00D970E9 /* LoginFormValidator.swift */; };
@@ -155,6 +157,8 @@
 		15B254A525AA3A69000AC541 /* MySpotsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySpotsRequest.swift; sourceTree = "<group>"; };
 		15B254AA25AA43E4000AC541 /* FavoriteSpotsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSpotsRequest.swift; sourceTree = "<group>"; };
 		15B254AF25AA45B4000AC541 /* SpotDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailViewController.swift; sourceTree = "<group>"; };
+		15B254B725AA56F4000AC541 /* SpotDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotDetailRequest.swift; sourceTree = "<group>"; };
+		15B254BC25AA5BBA000AC541 /* MapDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDelegate.swift; sourceTree = "<group>"; };
 		15C946C1259A8CFA00D970E9 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		15C946CE259AA2BA00D970E9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		15C946D4259AA66C00D970E9 /* LoginFormValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormValidator.swift; sourceTree = "<group>"; };
@@ -413,6 +417,7 @@
 			children = (
 				159EAABE25A4B9B800EF8B1A /* NavDrawerNavigationDelegate.swift */,
 				1562715225A9346F005A08A9 /* ContentFloatingPanelDelegate.swift */,
+				15B254BC25AA5BBA000AC541 /* MapDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -456,6 +461,7 @@
 				15B2546725A960DA000AC541 /* AddParkSpotRequest.swift */,
 				15B254A525AA3A69000AC541 /* MySpotsRequest.swift */,
 				15B254AA25AA43E4000AC541 /* FavoriteSpotsRequest.swift */,
+				15B254B725AA56F4000AC541 /* SpotDetailRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -767,9 +773,11 @@
 				15D30D3E25A768BD00A90B28 /* CurrentLocationMarker.swift in Sources */,
 				1562715825A936C0005A08A9 /* AddStreetSpotRequestModel.swift in Sources */,
 				15C9476F259D600C00D970E9 /* LoginRequestModel.swift in Sources */,
+				15B254BD25AA5BBA000AC541 /* MapDelegate.swift in Sources */,
 				15D30D7025A8A8C600A90B28 /* ParkCategory.swift in Sources */,
 				1562714E25A917B2005A08A9 /* AddParkSpotFormValidator.swift in Sources */,
 				15768AA82598F05000409E2B /* LoginViewController.swift in Sources */,
+				15B254B825AA56F4000AC541 /* SpotDetailRequest.swift in Sources */,
 				15C9471E259BF78C00D970E9 /* RegisterFormValidator.swift in Sources */,
 				15C947B1259E382800D970E9 /* RequestModelBasedResourceApiRequest.swift in Sources */,
 				15C947A8259E280100D970E9 /* BasedResourceApiRequest.swift in Sources */,
