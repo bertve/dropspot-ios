@@ -12,19 +12,5 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-#import "MDCThumbTrack.h"
-
-#import "MaterialInk.h"
-#import "MDCNumericValueLabel.h"
-#import "MDCDiscreteDotView.h"
-
-@interface MDCThumbTrack (Private)
-
-@property(nonatomic, nonnull, readonly) MDCNumericValueLabel *numericValueLabel;
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-@property(nonatomic, nonnull, readonly) MDCInkTouchController *touchController;
-#pragma clang diagnostic pop
-@property(nonatomic, nonnull, readonly) MDCDiscreteDotView *discreteDotView;
-
-@end
+#import "MDCCard+MaterialTheming.h"
+#import "MDCCardCollectionCell+MaterialTheming.h"

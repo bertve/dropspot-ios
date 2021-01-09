@@ -44,6 +44,9 @@ PODS:
     - MaterialComponents/Ripple
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Shapes
+  - "MaterialComponents/Cards+Theming (119.3.0)":
+    - MaterialComponents/Cards
+    - MaterialComponents/schemes/Container
   - MaterialComponents/Dialogs (119.3.0):
     - MaterialComponents/Buttons
     - MaterialComponents/Elevation
@@ -102,16 +105,6 @@ PODS:
     - MaterialComponents/Availability
     - MaterialComponents/private/Math
     - "MaterialComponents/private/TextControlsPrivate+Shared"
-  - MaterialComponents/private/ThumbTrack (119.3.0):
-    - MaterialComponents/Availability
-    - MaterialComponents/Ink
-    - MaterialComponents/private/Math
-    - MaterialComponents/Ripple
-    - MaterialComponents/ShadowElevations
-    - MaterialComponents/ShadowLayer
-    - MaterialComponents/ShapeLibrary
-    - MaterialComponents/Typography
-    - MDFInternationalization
   - MaterialComponents/Ripple (119.3.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Availability
@@ -150,12 +143,6 @@ PODS:
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
     - MaterialComponents/ShadowLayer
-  - MaterialComponents/Slider (119.3.0):
-    - MaterialComponents/Elevation
-    - MaterialComponents/Palettes
-    - MaterialComponents/private/Math
-    - MaterialComponents/private/ThumbTrack
-    - MaterialComponents/ShadowElevations
   - MaterialComponents/Snackbar (119.3.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/Availability
@@ -224,9 +211,9 @@ DEPENDENCIES:
   - MaterialComponents/Buttons
   - "MaterialComponents/Buttons+Theming"
   - MaterialComponents/Cards
+  - "MaterialComponents/Cards+Theming"
   - MaterialComponents/Dialogs
   - MaterialComponents/schemes
-  - MaterialComponents/Slider
   - MaterialComponents/Snackbar
   - "MaterialComponents/TextControls+FilledTextAreas"
   - "MaterialComponents/TextControls+FilledTextAreasTheming"
@@ -256,6 +243,6 @@ SPEC CHECKSUMS:
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
 
-PODFILE CHECKSUM: 5c129b2de5a8cb1ce8a3550117377c26c1766a94
+PODFILE CHECKSUM: bc59e56af1352433d60dab288973f59e45321f75
 
 COCOAPODS: 1.10.0

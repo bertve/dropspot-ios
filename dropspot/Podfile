@@ -18,12 +18,13 @@ target 'dropspot' do
   pod 'MaterialComponents/TextControls+OutlinedTextAreasTheming'
   pod 'MaterialComponents/TextControls+OutlinedTextFieldsTheming'
   pod 'MaterialComponents/Cards'
-  pod 'MaterialComponents/Slider'
+  pod 'MaterialComponents/Cards+Theming'
   pod 'MaterialComponents/Dialogs'
   pod 'MaterialComponents/Snackbar'
   pod 'MaterialComponents/ActivityIndicator'
   pod 'KYDrawerController'
   pod 'FloatingPanel'
+  
 
   
   target 'dropspotTests' do

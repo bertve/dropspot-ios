@@ -227,26 +227,11 @@
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="spotCell" id="lv3-Ba-JHx" customClass="SpotDetailCollectionViewCell" customModule="dropspot" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eIb-YR-hzY">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eIb-YR-hzY" customClass="spotDetailCollectionViewCellContent" customModule="dropspot" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEb-7V-C24">
-                                            <rect key="frame" x="64" y="64" width="0.0" height="0.0"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="hEb-7V-C24" firstAttribute="centerY" secondItem="eIb-YR-hzY" secondAttribute="centerY" id="Qaz-QC-Tr9"/>
-                                        <constraint firstItem="hEb-7V-C24" firstAttribute="centerX" secondItem="eIb-YR-hzY" secondAttribute="centerX" id="XDw-hN-HXY"/>
-                                    </constraints>
                                 </collectionViewCellContentView>
-                                <color key="backgroundColor" name="PrimaryColor"/>
-                                <connections>
-                                    <outlet property="lbl" destination="hEb-7V-C24" id="nJ6-1Z-YgH"/>
-                                </connections>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -469,7 +454,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wa-DG-aDO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2313.04347826087" y="1432.3660714285713"/>
+            <point key="canvasLocation" x="-2361" y="1412"/>
         </scene>
     </scenes>
     <resources>
