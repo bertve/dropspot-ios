@@ -27,7 +27,7 @@ USER
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="200" alt="login screen of app" src="/readme/user/login.png"> |  <img width="200" alt="register screen of app" src="/readme/user/register.png">|<img width="200" alt="home screen of app" src="/readme/user/home.png">|
+|<img width="200" alt="login screen of app" src="/readme/user/login.png"> |  <img width="200" alt="navigation drawer component of app" src="/readme/user/nav_drawer.png">|<img width="200" alt="home screen of app" src="/readme/user/home.png">|
 |<img width="200" alt="street spot representation" src="/readme/user/street_spot.png">  |  <img width="200" alt="park spot representation" src="/readme/user/park_spot.png">|<img width="200" alt="spot list" src="/readme/user/spot_list.png">|
      
 ## Permissions
