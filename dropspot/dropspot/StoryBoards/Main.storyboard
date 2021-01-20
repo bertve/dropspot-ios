@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IBp-6M-Bgj">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <connections>
                                     <segue destination="I3g-EM-aMo" kind="embed" identifier="embedMap" id="UHC-09-q26"/>
                                 </connections>
@@ -31,7 +31,7 @@
                             <constraint firstItem="IBp-6M-Bgj" firstAttribute="leading" secondItem="SAP-kJ-ARx" secondAttribute="leading" id="Ac6-0H-sN3"/>
                             <constraint firstItem="SAP-kJ-ARx" firstAttribute="trailing" secondItem="IBp-6M-Bgj" secondAttribute="trailing" id="G8s-rH-bg9"/>
                             <constraint firstItem="IBp-6M-Bgj" firstAttribute="top" secondItem="SAP-kJ-ARx" secondAttribute="top" id="XLC-iY-2FS"/>
-                            <constraint firstItem="SAP-kJ-ARx" firstAttribute="bottom" secondItem="IBp-6M-Bgj" secondAttribute="bottom" id="faA-Og-8IG"/>
+                            <constraint firstAttribute="bottom" secondItem="IBp-6M-Bgj" secondAttribute="bottom" id="faA-Og-8IG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pTF-By-jF5">
@@ -177,14 +177,14 @@
             <objects>
                 <viewController id="I3g-EM-aMo" customClass="MapViewController" customModule="dropspot" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WOF-jL-LMc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lUh-yV-Wya">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lpH-fK-bRp" customClass="MDCFloatingButton">
-                                <rect key="frame" x="380" y="736" width="18" height="22"/>
+                                <rect key="frame" x="380" y="770" width="18" height="22"/>
                                 <state key="normal" image="plus" catalog="system"/>
                                 <connections>
                                     <action selector="fabBtnPressed:" destination="I3g-EM-aMo" eventType="touchUpInside" id="lGF-xO-xyf"/>
@@ -197,8 +197,8 @@
                             <constraint firstItem="lUh-yV-Wya" firstAttribute="top" secondItem="WOF-jL-LMc" secondAttribute="top" id="Xkr-d4-ALH"/>
                             <constraint firstItem="lUh-yV-Wya" firstAttribute="bottom" secondItem="WOF-jL-LMc" secondAttribute="bottom" id="dFC-CL-zdh"/>
                             <constraint firstItem="lUh-yV-Wya" firstAttribute="leading" secondItem="WOF-jL-LMc" secondAttribute="leading" id="muC-C8-aO7"/>
-                            <constraint firstItem="C5Z-GS-Xr7" firstAttribute="bottom" secondItem="lpH-fK-bRp" secondAttribute="bottom" constant="16" id="og2-Wx-Whw"/>
-                            <constraint firstItem="C5Z-GS-Xr7" firstAttribute="trailing" secondItem="lpH-fK-bRp" secondAttribute="trailing" constant="16" id="pAe-BN-Bry"/>
+                            <constraint firstAttribute="bottom" secondItem="lpH-fK-bRp" secondAttribute="bottom" constant="16" id="og2-Wx-Whw"/>
+                            <constraint firstAttribute="trailing" secondItem="lpH-fK-bRp" secondAttribute="trailing" constant="16" id="pAe-BN-Bry"/>
                             <constraint firstItem="lUh-yV-Wya" firstAttribute="trailing" secondItem="WOF-jL-LMc" secondAttribute="trailing" id="uEU-Vg-kaG"/>
                         </constraints>
                     </view>
